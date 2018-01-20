@@ -1,0 +1,420 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Sample document for preparing papers to  "Avtomatika i Telemekhanika"
+%%  charset=windows-1251
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt,final]{a&t}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{verbatim}
+\usepackage{amsmath}
+\usepackage{epstopdf}
+\usepackage{cite}
+
+%%%%%% настройка заголовков и подзаголовков float блоков (figure/table)
+\usepackage{subcaption}
+\captionsetup{compatibility=false}
+
+\DeclareCaptionSubType[asbuk]{figure} % кирилица для нумерации подрисунков
+
+\captionsetup[figure]{% настройки подписей рисунков
+	labelsep=period,% разделить нумерационной части рисунка и подписи
+	textformat=period%добавить точку в конце
+} 
+\captionsetup[sub]{% настройки дочерних подписей
+	subrefformat=simple, % Формат ссылок, например, для \ref будет 4a (без разделителей), для \subref будет просто a (без скобок)
+	labelsep=none,% нумерационной части рисунка и подписи
+	textformat=simple,% печатать подпись без изменения (без точки)
+	justification=centering,% настройка выравнивания
+	singlelinecheck=true,% не растягивать короткие подписи,
+	skip=0pt% подвинуть подпись к рисунку
+}
+%%%%%%%%
+
+
+\graphicspath{{fig/}}
+
+
+%\renewcommand{\theequation}{\arabic{section}.\arabic{equation}}
+%\newtheorem{theorem}{Theorem}
+%\newtheorem{lemma}[theorem]{Lemma}
+%\newtheorem{remark}{Remark}
+%\newtheorem{assumption}{\hspace{\parindent}}%[section]
+
+%\newtheorem{definition}{Definition}[section]
+%\newtheorem{proposition}{Proposition}[section]
+%\newtheorem{corollary}{Corollary}[section]
+%\newtheorem{fact}{Fact}[section]
+%\newtheorem{example}{Example}[section]
+%\newtheorem{claim}[assumption]{Claim}
+%\newtheorem{proof}{Proof}
+
+
+\renewcommand{\thefootnote}{\arabic{footnote})}
+
+\newtheorem{assumption}{\hspace{\parindent}Д\,о\,п\,у\,щ\,е\,н\,и\,е\,}%[section]
+
+\linespread{2}
+
+\year{2017}
+\title{Оценивание параметров робота-манипулятора Kuka Youbot}%
+
+\thanks{}
+
+\authors{А.О. Клюнин $^{1}$ (aoklyunin@gmail.com)\\ А.~А.~Пыркин$^{1}$, д-р. техн. наук (a.pyrkin@gmail.com)\\  
+($^1$Университет ИТМО)
+}
+
+\abstract{Предложен новый алгоритм оценивания параметров механических параметров динамической модели робота. }
+
+\begin{document}
+\maketitle
+
+%\section{Введение}
+%\label{section_introduction}
+
+
+\section{Введение}
+Здесь надо что-то написать, но я пока не придумал, что. 
+
+\section{Постановка задачи}
+
+Выберем следующую динамическую модель робота:
+\begin{equation}
+	\label{dynamicModel}
+	H(q)\ddot{q}+C(q,\dot{q})\dot{q}+G(q)=\tau,
+\end{equation}
+
+где $q$ - вектор обобщённых координат, $H(q)$ - тензор инерции, $C(q,\dot{q})\dot{q}$ - момент вязкого трения, $G(q)$ - момент силы гравитации, $\tau$ - сумма моментов, действующих на сочленение.
+\newpage
+Классические методы предполагают идентификацию по следующему алгоритму поиска зависимостей:
+
+\begin{itemize}
+	\item $C(q,\dot{q})$
+	\item $G(q)$
+	\item $H(q)$
+\end{itemize}
+
+
+
+В данной работе рассматривается алгоритм, согласно которому первой производится идентификация $G(q)$.
+
+DH параметры рассматриваемого робота Kuka Youbot Arm  представлены:
+ в Таблице \ref{tab:DH}
+
+\begin{table}[h!]
+	\caption{ДХ параметры}
+	\begin{center}	
+		\begin{tabular}{|c|c|c|c|c|}
+			\hline
+			Звено&	$\alpha$& $a$& $d$&$\theta$\\ \hline
+			1 &   $ 90^{\circ}$&  $33$&$147$& $q_1 -170^{\circ}$ \\
+			2 &   $0$& $155$& $0$& $q_2 + 25^{\circ}$ \\
+			3 &   $0$ &  $135$ & $0$ & $q_3 + 150^{\circ}$ \\
+			4 &     $ 90^{\circ}$&$0$&$0$&$q_4$\\
+			5 &     $0$ & $0$ & $217.5$&$ q_5 -90^{\circ}$\\ \hline
+		\end{tabular}
+	\end{center}
+	\label{tab:DH}
+\end{table}
+
+\section{Статическая интерпретация}
+	Согласно DH параметрам были построены матрицы преобразования для каждого из звеньев. Обозначим матрицу перехода из $i$-ой системы координат в $j$-ю как $A_{ij},~ i,j=\overline{1,5}$.
+	
+	Выберем следующее обозначение систем координат, связанных с роботом $O_{xyz_0}$ - система координат основания робота, $O_{xyz_i}, i=\overline{1,5}$ - система координат, связанна с $i$-м звеном. 
+	
+	Тогда матрицы преобразования из СК каждого из звеньев можно представить следующим образом:
+	
+	\begin{equation*}
+	\begin{cases}
+		A_{01} = A_{01}\\
+		A_{02} = A_{01}\cdot A_{12}\cdot\\
+		A_{03} = A_{01}\cdot A_{12}\cdot   A_{23}\cdot \\
+		A_{04} = A_{01}\cdot A_{12}\cdot   A_{23}\cdot  A_{34}\cdot \\
+		A_{05}= A_{01}\cdot  A_{12}\cdot  A_{23}\cdot  A_{34}\cdot  A_{45}\cdot \\
+	\end{cases}
+	\end{equation*}
+	
+	Пусть центр $i$-е звено имеет массу $m_i$ и центр тяжести с координатами в СК звена $R_i(r_{x_i},r_{y_i},r_{z_i})$
+	
+	Тогда координаты центра тяжести $i$-го звена можно найти, как
+	\begin{equation}
+		R_i^0 = A_{0i}\cdot \begin{bmatrix}
+			r_{x_i}&r_{y_i}&r_{z_i}&1\\
+		\end{bmatrix}^T , i=\overline{1,5}
+	\end{equation}
+	
+	Размерность 4х1 для вектора $R_i^0$ выбрана неслучайно, ниже будет раскрыта причина такого расширения.
+	
+	Рассмотрим \ref{dynamicModel} при неподвижной фиксации робота. В случае статичной фиксации $H(q)\ddot{q}=0$ и $C(q,\dot{q})\dot{q}=0$. 
+	
+	Рассмотрим силы, действующие в статичном положении. К $i$-му сочленению приложены три момента: момент силы притяжения $G(q)_i$, момент трения покоя $\tau_{f_i}$, направленный в противоположную сторону по отношению к $G(q)_i$ и момент, развиваемый электроприводом $i$-го сочленения. 
+	
+	ToDo: строго обосновать, почему $\tau_f=const=max$.
+	
+	Обозначим максимальные значения силы трения как вектор-столбец $F=\begin{bmatrix}
+		F_1&F_2&F_3&F_4&F_5\\
+	\end{bmatrix}^T$ Тогда \ref{dynamicModel} принимает вид:
+	
+	\begin{equation}
+		\label{staticModel}
+		\tau_f = G(q)+diag\{F\}sign(G(q))
+	\end{equation}
+	
+\section{Регрессионная модель}
+	
+	Из теории мы знаем, что 
+
+	\begin{equation}
+		\label{gravityEquation}
+		G(q)_i=\frac{\partial P_i}{\partial q_i},
+	\end{equation}
+
+где $P_i$ - полная потенциальная энергия $i$-го звена робота.
+
+	Пусть $p_i=m_igh_i$ - потенциальная энергия $i$-го звена без учёта звеньев, находящихся выше по кинематической схеме, где $h_i$ - высота центра масс $i$-звена.
+	
+	Полная энергия звеньев равна:
+	
+	\begin{equation}
+	\label{full_p_energy}
+	\begin{cases}
+		P_1 = p_1+p_2+p_3+p_4+p_5\\
+		P_2 = p_2+p_3+p_4+p_5\\
+		P_3 = p_3+p_4+p_5\\
+		P_4 = p_4+p_5\\
+		P_5 = p_5\\
+	\end{cases}
+	\end{equation}
+	
+	
+	Пусть $\omega_i=\begin{bmatrix}
+		A_{0i_{31}}&		A_{0i_{32}}&		A_{0i_{33}} &		A_{0i_{34}}
+	\end{bmatrix}^T, \theta_i=\begin{bmatrix}
+		r_{x_i}&r_{y_i}&r_{z_i}&1\\
+	\end{bmatrix}^T$, тогда 
+	
+	\begin{equation}
+		\label{energy_regressor}
+		p_i = m_i\cdot g\cdot \theta_i^T\omega
+	\end{equation}
+	
+	Подставим \ref{energy_regressor} и \ref{full_p_energy} в \ref{gravityEquation}:
+		
+	
+	\begin{equation}
+	\label{gravityEquationParametrised}
+	G(q)=g\begin{bmatrix}
+	(m_1\cdot\theta_1)\cdot\frac{\partial \omega_1}{\partial q_1}+
+	(m_2\cdot\theta_2)\cdot\frac{\partial \omega_2}{\partial q_1}+
+	(m_3\cdot\theta_3)\cdot\frac{\partial \omega_3}{\partial q_1}+
+	(m_4\cdot\theta_4)\cdot\frac{\partial \omega_4}{\partial q_1}+
+	(m_5\cdot\theta_5)\cdot\frac{\partial \omega_5}{\partial q_1}\\
+	(m_2\cdot\theta_2)\cdot\frac{\partial \omega_2}{\partial q_2}+
+	(m_3\cdot\theta_3)\cdot\frac{\partial \omega_3}{\partial q_2}+
+	(m_4\cdot\theta_4)\cdot\frac{\partial \omega_4}{\partial q_2}+
+	(m_5\cdot\theta_5)\cdot\frac{\partial \omega_5}{\partial q_2}\\
+	(m_3\cdot\theta_3)\cdot\frac{\partial \omega_3}{\partial q_3}+
+	(m_4\cdot\theta_4)\cdot\frac{\partial \omega_4}{\partial q_3}+
+	(m_5\cdot\theta_5)\cdot\frac{\partial \omega_5}{\partial q_3}\\
+	(m_4\cdot\theta_4)\cdot\frac{\partial \omega_4}{\partial q_4}+
+	(m_5\cdot\theta_5)\cdot\frac{\partial \omega_5}{\partial q_4}\\
+	(m_5\cdot\theta_5)\cdot\frac{\partial \omega_5}{\partial q_5}\\
+	\end{bmatrix}
+	\end{equation}
+	
+	Пусть 
+	\begin{equation*}
+	\overline{\theta}^T= [gm_1\theta_1^T~gm_2\theta_2^T~gm_3\theta_3^T~gm_4\theta_4^T~gm_5\theta_5^T] 
+	\end{equation*}
+
+	\begin{equation*}
+	\overline{\omega}=\begin{bmatrix}
+	\frac{\partial \omega_1}{\partial q_1}& 0 & 0 & 0& 0\\
+	\frac{\partial \omega_2}{\partial q_1}& \frac{\partial \omega_2}{\partial q_2} & 0 & 0& 0\\
+	\frac{\partial \omega_3}{\partial q_1}& \frac{\partial \omega_3}{\partial q_2} & \frac{\partial \omega_3}{\partial q_3} & 0& 0\\
+	\frac{\partial \omega_4}{\partial q_1}& \frac{\partial \omega_4}{\partial q_2} & \frac{\partial \omega_4}{\partial q_3}& \frac{\partial \omega_4}{\partial q_4}& 0\\				
+	\frac{\partial \omega_5}{\partial q_1}& \frac{\partial \omega_5}{\partial q_2} & \frac{\partial \omega_5}{\partial q_3} & \frac{\partial \omega_5}{\partial q_4}& \frac{\partial \omega_5}{\partial q_5}\\		
+	\end{bmatrix}
+	\end{equation*}
+	
+	Тогда \ref{gravityEquationParametrised} принимает вид:
+	
+	\begin{equation}
+		 \label{gravityEquationFullParametrised}
+		G(q)=\overline{\theta}^T\cdot\overline{\omega}
+	\end{equation}
+	
+	Тогда \ref{staticModel} можно переписать следующим образом:
+	
+	\begin{equation}
+		G(q)=\overline{\theta}^T\cdot\overline{\omega}(q)+\overline{F}\cdot{sign(\overline{\theta}^T\cdot\overline{\omega}(q))},
+	\end{equation}
+	
+	
+\section{Идентификация}
+	
+	Для идентификации воспользуемся РМНК, рассматривая силу трения покоя $\overline{F}\cdot{sign(\overline{\theta}^T\cdot\overline{\omega}(q))}$ как аддитивный шум.
+	
+	Тогда \ref{gravityEquationFullParametrised} сводится к классической 	регрессионной модели:
+	
+	\begin{equation}
+		\label{gravityEquationReducedParametrised}
+		G(q)=\overline{\theta}^T\cdot\overline{\omega}
+	\end{equation}
+	
+	Воспользуемся РМНК для определения неизвестных параметров $\overline{\theta}$.
+	
+		
+	В результате эксперимента получены следующие значения:
+	
+	\begin{equation*}
+		\begin{cases}
+			\hat{m_1gr_x} = 1.0000\\
+	\hat{m_1gr_y} = 1.0000\\
+	\hat{m_1gr_z} = 1.0000\\
+	\hat{m_1g} = 1.0000\\
+		\end{cases}
+	\begin{cases}
+	\hat{m_2gr_x} = 1.0000\\
+	\hat{m_2gr_y} = -0.0575\\
+	\hat{m_2gr_z} = 1.0000\\
+	\hat{m_2g} = 0.0078\\
+		\end{cases}
+	\begin{cases}
+	\hat{m_3gr_x} = 40.8913\\
+	\hat{m_3gr_y} = -0.2375\\
+	\hat{m_3gr_z} = 1.0000\\
+	\hat{m_3g} = 0.0058\\
+		\end{cases}
+	\end{equation*}
+	
+	\begin{equation*}
+	\begin{cases}
+\hat{m_4gr_x} = -0.3048\\
+\hat{m_4gr_y} = 0.0058\\
+\hat{m_4gr_z} = 0.0058\\
+\hat{m_4g} = 1.0000\\
+\end{cases}
+\begin{cases}
+\hat{m_5gr_x} = -0.1522\\
+\hat{m_5gr_y} = -0.0141\\
+\hat{m_5gr_z} = 1.0000\\
+\hat{m_5g} = -0.0002\\
+\end{cases}
+	\end{equation*}
+	
+	\section{Заключение}
+	
+	Полученные оценки не совпадают с реальными физическими параметрами робота, но обеспечивают корректную оценку моментов, развиваемых в сочленениях робота в статических положениях.
+	
+	
+\begin{thebibliography}{1}
+
+
+
+\end{thebibliography}
+
+
+\newpage
+
+
+\pagestyle{empty}
+
+
+
+%адаптивность
+\begin{figure}[hp]
+	\linespread{1.4}
+
+	\captionsetup[subfigure]{labelformat=empty}
+	\subcaptionbox{\label{fig:multi_omega3} Временная диаграмма оценки
+	\linebreak
+	 $\hat\tau_1(t)$}%
+		{\subref{fig:multi_omega3}\linebreak\includegraphics[width=0.48\textwidth]{tau1}}
+	\hfill
+	\subcaptionbox{\label{fig:multi_ampl3} Временная диаграмма оценки
+		\linebreak
+		$\hat\tau_2(t)$}
+		{\subref{fig:multi_ampl3}\linebreak\includegraphics[width=0.48\textwidth]{tau2}}
+	\\ \vspace{3mm}
+	
+	\subcaptionbox{\label{fig:multi_sigma3} Временная диаграмма оценки
+	\linebreak
+	$\hat\tau_3(t)$}%
+		{\subref{fig:multi_sigma3}\linebreak\includegraphics[width=0.48\textwidth]{tau3}}
+	\hfill
+	\subcaptionbox{\label{fig:multi_phi3}Временная диаграмма оценки
+		\linebreak
+		$\hat\tau_4(t)$}
+		{\subref{fig:multi_phi3}\linebreak\includegraphics[width=0.48\textwidth]{tau4}}
+	\\ \vspace{3mm}
+	
+	\subcaptionbox{\label{fig:multi_xi3} Временная диаграмма оценки
+	\linebreak
+	$\hat\tau_5(t)$}%
+		{\subref{fig:multi_xi3}\linebreak\includegraphics[width=0.48\textwidth]{tau5}}
+	\hfill
+	
+	\caption{\label{fig:multiparameters3} Оценки моментов}
+\end{figure}
+
+
+
+
+%адаптивность
+\begin{figure}[hp]
+	\linespread{1.4}
+	
+	\captionsetup[subfigure]{labelformat=empty}
+	\subcaptionbox{\label{fig:multi_omega3} Временная диаграмма оценки
+		\linebreak
+		$\hat\theta_1(t)$}%
+	{\subref{fig:multi_omega3}\linebreak\includegraphics[width=0.48\textwidth]{th1}}
+	\hfill
+	\subcaptionbox{\label{fig:multi_ampl3} Временная диаграмма оценки
+		\linebreak
+		$\hat\theta_2(t)$}
+	{\subref{fig:multi_ampl3}\linebreak\includegraphics[width=0.48\textwidth]{th2}}
+	\\ \vspace{3mm}
+	
+	\subcaptionbox{\label{fig:multi_sigma3} Временная диаграмма оценки
+		\linebreak
+		$\hat\theta_3(t)$}%
+	{\subref{fig:multi_sigma3}\linebreak\includegraphics[width=0.48\textwidth]{th3}}
+	\hfill
+	\subcaptionbox{\label{fig:multi_phi3}Временная диаграмма оценки
+		\linebreak
+		$\hat\theta_4(t)$}
+	{\subref{fig:multi_phi3}\linebreak\includegraphics[width=0.48\textwidth]{th4}}
+	\\ \vspace{3mm}
+	
+	\subcaptionbox{\label{fig:multi_xi3} Временная диаграмма оценки
+		\linebreak
+		$\hat\theta_5(t)$}%
+	{\subref{fig:multi_xi3}\linebreak\includegraphics[width=0.48\textwidth]{th5}}
+	\hfill
+	
+	\caption{\label{fig:multiparameters3} Оценки неизвестных параметров}
+\end{figure}
+
+
+
+%\begin{figure}[htp]
+%	\linespread{1.4}
+%
+%	\captionsetup[subfigure]{labelformat=empty}
+%	\subcaptionbox{}%
+%		{\subref{fig:multi_y1}\linebreak\includegraphics[width=0.48\textwidth]{multi_y1}\phantomsubcaption{\label{fig:multi_y1}}}
+%	\hfill
+%	\subcaptionbox{}%
+%		{\subref{fig:multi_y3}\linebreak\includegraphics[width=0.48\textwidth]{multi_y3}\phantomsubcaption{\label{fig:multi_y3}}}
+%	\\ \vspace{-10mm}
+%	\caption{\label{fig:multiparameters4} Временные диаграммы полигармонических сигналов $y(t)=6+3\sin(1,4t+2)+6\sin(3,1t+4)$ (\subref{fig:multi_y1}); $y(t)=6+3\sin(2,1t+3)+4\sin(t+2)$ для $0\le t<50$ и $y=-5+4\sin(2t+5)+2\sin(2,7t+1)$ для $t\ge50$ (\subref{fig:multi_y3})}
+%\end{figure}
+%
+
+
+
+
+
+\end{document}

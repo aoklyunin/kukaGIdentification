@@ -1,0 +1,22 @@
+disp('инициализируем данные для идентификации');
+F = diag([0.755;0.8495;0.8495;0.5726;0.156]);
+save('../workspace/F.mat','F');
+theta = ones(20,1);
+gamma = 1000;
+P = eye(20)*gamma;
+save('../workspace/hatTheta.mat','theta','P');
+
+disp('загружаем данные из лога');
+loadData;
+disp('получаем статичные положения робота');
+calculate;
+disp('получаем символьное выражение для матрицы измеряемых параметров');
+getWs;
+disp('получаем численные значения для матрицы измеряемых параметров');
+getDoubleWs;
+disp('получаем наблюдатель theta');
+getHatTheta;
+getHatTheta;
+getHatTheta;
+disp('получаем наблюдатель моментов');
+getHatG;
