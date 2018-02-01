@@ -1,0 +1,103 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Sample document for preparing papers to  "Avtomatika i Telemekhanika"
+%%  charset=windows-1251
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt,final]{a&t}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{verbatim}
+\usepackage{amsmath}
+\usepackage{epstopdf}
+\usepackage{cite}
+\usepackage{lscape}
+
+%%%%%% настройка заголовков и подзаголовков float блоков (figure/table)
+\usepackage{subcaption}
+\captionsetup{compatibility=false}
+
+\DeclareCaptionSubType[asbuk]{figure} % кирилица для нумерации подрисунков
+
+\captionsetup[figure]{% настройки подписей рисунков
+	labelsep=period,% разделить нумерационной части рисунка и подписи
+	textformat=period%добавить точку в конце
+} 
+\captionsetup[sub]{% настройки дочерних подписей
+	subrefformat=simple, % Формат ссылок, например, для \ref будет 4a (без разделителей), для \subref будет просто a (без скобок)
+	labelsep=none,% нумерационной части рисунка и подписи
+	textformat=simple,% печатать подпись без изменения (без точки)
+	justification=centering,% настройка выравнивания
+	\singlelinecheck=true,% не растягивать короткие подписи,
+	skip=0pt% подвинуть подпись к рисунку
+}
+%%%%%%%%
+
+
+\graphicspath{{fig/}}
+
+
+%\renewcommand{\theequation}{\arabic{section}.\arabic{equation}}
+%\newtheorem{theorem}{Theorem}
+%\newtheorem{lemma}[theorem]{Lemma}
+%\newtheorem{remark}{Remark}
+%\newtheorem{assumption}{\hspace{\parindent}}%[section]
+
+%\newtheorem{definition}{Definition}[section]
+%\newtheorem{proposition}{Proposition}[section]
+%\newtheorem{corollary}{Corollary}[section]
+%\newtheorem{fact}{Fact}[section]
+%\newtheorem{example}{Example}[section]
+%\newtheorem{claim}[assumption]{Claim}
+%\newtheorem{proof}{Proof}
+
+
+\renewcommand{\thefootnote}{\arabic{footnote})}
+
+\newtheorem{assumption}{\hspace{\parindent}Д\,о\,п\,у\,щ\,е\,н\,и\,е\,}%[section]
+
+\linespread{2}
+
+\year{2017}
+\title{Оценивание параметров робота-манипулятора Kuka Youbot}%
+
+\thanks{}
+
+\authors{А.О. Клюнин $^{1}$ (aoklyunin@gmail.com)\\ А.~А.~Пыркин$^{1}$, д-р. техн. наук (a.pyrkin@gmail.com)\\  
+($^1$Университет ИТМО)
+}
+
+\abstract{Предложен новый алгоритм оценивания параметров механических параметров динамической модели робота. }
+
+\begin{document}
+\maketitle
+
+%\section{Введение}
+%\label{section_introduction}
+
+
+\section{Введение}
+Здесь надо что-то написать, но я пока не придумал, что. 
+
+\section{Тест}
+\begin{landscape}
+
+
+$Ws = \begin{bmatrix}
+	0&0&0&0&0\\
+	0&0&0&0&0\\
+	0&0&0&0&0\\
+	0&0&0&0&0\\
+	0&0&0&0&0\\
+	0&f(\alpha_1,\alpha_2,q_2)&0&0&0\\
+	0&f(\alpha_1,\alpha_2,q_2)&0&0&0\\
+	0&f(A_2,\alpha_2,q_2)&0&0&0\\
+	0&0&f(\alpha_1,\alpha_2,q_1,q_2)&0&0\\
+	0&f(\alpha_1,\alpha_2,\alpha_3,q_2,q_3)&f(\alpha_1,\alpha_2,\alpha_3,q_2,q_3)&0&0\\
+	0&f(\alpha_1,\alpha_2,\alpha_3,q_2,q_3)&f(\alpha_1,\alpha_2,\alpha_3,q_2,q_3)&0&0\\
+	0&f(A_2,A_3,\alpha_1,\alpha_2,\alpha_3,D_3,q_2,q_3)&f(A_3,\alpha_1,\alpha_2)&0&0\\
+	0&0&f(A_3,A_4D_4,\alpha_1,\alpha_2,\alpha_3,q_2,q_3,q_4)&f(A_4,\alpha_1,\alpha_2,\alpha_3,q_2,q3,q_4&0\\
+	
+	 
+\end{bmatrix}$
+
+\end{landscape}
+\end{document}

@@ -8,8 +8,7 @@ eT = [];
 curWs = [];
 for i=1:1:size(T,1) 
     curWS(:,:) = WS(i,:,:);
-   % hatT(i,:) = curWS'*theta;
-    hatT(i,:) = curWS*theta;
+    hatT(i,:) = curWS'*theta;
     eT(i,:) = hatT(i,:) - T(i,:);
 end
 

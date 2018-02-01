@@ -1,0 +1,384 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Sample document for preparing papers to  "Avtomatika i Telemekhanika"
+%%  charset=windows-1251
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt,final]{a&t}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{verbatim}
+\usepackage{amsmath}
+\usepackage{epstopdf}
+\usepackage{cite}
+
+%%%%%% настройка заголовков и подзаголовков float блоков (figure/table)
+\usepackage{subcaption}
+\captionsetup{compatibility=false}
+
+\DeclareCaptionSubType[asbuk]{figure} % кирилица для нумерации подрисунков
+
+\captionsetup[figure]{% настройки подписей рисунков
+	labelsep=period,% разделить нумерационной части рисунка и подписи
+	textformat=period%добавить точку в конце
+} 
+\captionsetup[sub]{% настройки дочерних подписей
+	subrefformat=simple, % Формат ссылок, например, для \ref будет 4a (без разделителей), для \subref будет просто a (без скобок)
+	labelsep=none,% нумерационной части рисунка и подписи
+	textformat=simple,% печатать подпись без изменения (без точки)
+	justification=centering,% настройка выравнивания
+	\singlelinecheck=true,% не растягивать короткие подписи,
+	skip=0pt% подвинуть подпись к рисунку
+}
+%%%%%%%%
+
+
+\graphicspath{{fig/}}
+
+
+%\renewcommand{\theequation}{\arabic{section}.\arabic{equation}}
+%\newtheorem{theorem}{Theorem}
+%\newtheorem{lemma}[theorem]{Lemma}
+%\newtheorem{remark}{Remark}
+%\newtheorem{assumption}{\hspace{\parindent}}%[section]
+
+%\newtheorem{definition}{Definition}[section]
+%\newtheorem{proposition}{Proposition}[section]
+%\newtheorem{corollary}{Corollary}[section]
+%\newtheorem{fact}{Fact}[section]
+%\newtheorem{example}{Example}[section]
+%\newtheorem{claim}[assumption]{Claim}
+%\newtheorem{proof}{Proof}
+
+
+\renewcommand{\thefootnote}{\arabic{footnote})}
+
+\newtheorem{assumption}{\hspace{\parindent}Д\,о\,п\,у\,щ\,е\,н\,и\,е\,}%[section]
+
+\linespread{2}
+
+\year{2017}
+\title{Оценивание параметров робота-манипулятора Kuka Youbot}%
+
+\thanks{}
+
+\authors{А.О. Клюнин $^{1}$ (aoklyunin@gmail.com)\\ А.~А.~Пыркин$^{1}$, д-р. техн. наук (a.pyrkin@gmail.com)\\  
+($^1$Университет ИТМО)
+}
+
+\abstract{Предложен новый алгоритм оценивания параметров механических параметров динамической модели робота. }
+
+\begin{document}
+\maketitle
+
+%\section{Введение}
+%\label{section_introduction}
+
+
+\section{Введение}
+Здесь надо что-то написать, но я пока не придумал, что. 
+
+\section{Тест}
+
+$W_s(1 ,1)=
+0$
+
+$W_s(1 ,2)=
+0$
+
+$W_s(1 ,3)=
+0$
+
+$W_s(1 ,4)=
+0$
+
+$W_s(1 ,5)=
+0$
+
+$W_s(2 ,1)=
+0$
+
+$W_s(2 ,2)=
+0$
+
+$W_s(2 ,3)=
+0$
+
+$W_s(2 ,4)=
+0$
+
+$W_s(2 ,5)=
+0$
+
+$W_s(3 ,1)=
+0$
+
+$W_s(3 ,2)=
+0$
+
+$W_s(3 ,3)=
+0$
+
+$W_s(3 ,4)=
+0$
+
+$W_s(3 ,5)=
+0$
+
+$W_s(4 ,1)=
+0$
+
+$W_s(4 ,2)=
+0$
+
+$W_s(4 ,3)=
+0$
+
+$W_s(4 ,4)=
+0$
+
+$W_s(4 ,5)=
+0$
+
+$W_s(5 ,1)=
+0$
+
+$W_s(5 ,2)=
+0$
+
+$W_s(5 ,3)=
+0$
+
+$W_s(5 ,4)=
+0$
+
+$W_s(5 ,5)=
+0$
+
+$W_s(6 ,1)=
+0$
+
+$W_s(6 ,2)=
+-\cos(\alpha2)*\sin(\alpha1)*\sin(q2)$
+
+$W_s(6 ,3)=
+0$
+
+$W_s(6 ,4)=
+0$
+
+$W_s(6 ,5)=
+0$
+
+$W_s(7 ,1)=
+0$
+
+$W_s(7 ,2)=
+1.0*\sin(\alpha1)*\sin(\alpha2)*\sin(q2)$
+
+$W_s(7 ,3)=
+0$
+
+$W_s(7 ,4)=
+0$
+
+$W_s(7 ,5)=
+0$
+
+$W_s(8 ,1)=
+0$
+
+$W_s(8 ,2)=
+a2*\cos(q2)*\sin(\alpha1)$
+
+$W_s(8 ,3)=
+0$
+
+$W_s(8 ,4)=
+0$
+
+$W_s(8 ,5)=
+0$
+
+$W_s(9 ,1)=
+0$
+
+$W_s(9 ,2)=
+0$
+
+$W_s(9 ,3)=
+\cos(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) - \sin(\alpha1)*\sin(q2)*\sin(q3)$
+
+$W_s(9 ,4)=
+0$
+
+$W_s(9 ,5)=
+0$
+
+$W_s(10 ,1)=
+0$
+
+$W_s(10 ,2)=
+1.0*\sin(\alpha1)*\sin(\alpha2)*\sin(\alpha3)*\sin(q2) - 1.0*\cos(\alpha3)*\cos(q2)*\sin(\alpha1)*\sin(q3) - \cos(\alpha2)*\cos(\alpha3)*\cos(q3)*\sin(\alpha1)*\sin(q2)$
+
+$W_s(10 ,3)=
+- \cos(\alpha3)*\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) - 1.0*\cos(\alpha3)*\cos(q3)*\sin(\alpha1)*\sin(q2)$
+
+$W_s(10 ,4)=
+0$
+
+$W_s(10 ,5)=
+0$
+
+$W_s(11 ,1)=
+0$
+
+$W_s(11 ,2)=
+1.0*\cos(\alpha3)*\sin(\alpha1)*\sin(\alpha2)*\sin(q2) + \cos(q2)*\sin(\alpha1)*\sin(\alpha3)*\sin(q3) + 1.0*\cos(\alpha2)*\cos(q3)*\sin(\alpha1)*\sin(\alpha3)*\sin(q2)$
+
+$W_s(11 ,3)=
+1.0*\sin(\alpha3)*\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + \cos(q3)*\sin(\alpha1)*\sin(\alpha3)*\sin(q2)$
+
+$W_s(11 ,4)=
+0$
+
+$W_s(11 ,5)=
+0$
+
+$W_s(12 ,1)=
+0$
+
+$W_s(12 ,2)=
+a2*\cos(q2)*\sin(\alpha1) + a3*\cos(q2)*\cos(q3)*\sin(\alpha1) + 1.0*d3*\sin(\alpha1)*\sin(\alpha2)*\sin(q2) - a3*\cos(\alpha2)*\sin(\alpha1)*\sin(q2)*\sin(q3)$
+
+$W_s(12 ,3)=
+a3*\cos(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) - a3*\sin(\alpha1)*\sin(q2)*\sin(q3)$
+
+$W_s(12 ,4)=
+0$
+
+$W_s(12 ,5)=
+0$
+
+$W_s(13 ,1)=
+0$
+
+$W_s(13 ,2)=
+0$
+
+$W_s(13 ,3)=
+d4*(1.0*\sin(\alpha3)*\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + \cos(q3)*\sin(\alpha1)*\sin(\alpha3)*\sin(q2)) - \sin(q4)*(\cos(\alpha3)*\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + 1.0*\cos(\alpha3)*\cos(q3)*\sin(\alpha1)*\sin(q2)) + \cos(q4)*(\cos(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) - \sin(\alpha1)*\sin(q2)*\sin(q3)) - a4*\sin(q4)*(\cos(\alpha3)*\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + 1.0*\cos(\alpha3)*\cos(q3)*\sin(\alpha1)*\sin(q2)) + a4*\cos(q4)*(\cos(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) - \sin(\alpha1)*\sin(q2)*\sin(q3)) + a3*\cos(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) - a3*\sin(\alpha1)*\sin(q2)*\sin(q3)$
+
+$W_s(13 ,4)=
+\cos(q4)*(\sin(\alpha3)*(\cos(\alpha1)*\cos(\alpha2) - 1.0*\cos(q2)*\sin(\alpha1)*\sin(\alpha2)) + \cos(\alpha3)*\cos(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) - 1.0*\cos(\alpha3)*\sin(\alpha1)*\sin(q2)*\sin(q3)) - \sin(q4)*(\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + \cos(q3)*\sin(\alpha1)*\sin(q2)) - a4*\sin(q4)*(\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + \cos(q3)*\sin(\alpha1)*\sin(q2)) + a4*\cos(q4)*(\sin(\alpha3)*(\cos(\alpha1)*\cos(\alpha2) - 1.0*\cos(q2)*\sin(\alpha1)*\sin(\alpha2)) + \cos(\alpha3)*\cos(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) - 1.0*\cos(\alpha3)*\sin(\alpha1)*\sin(q2)*\sin(q3))$
+
+$W_s(13 ,5)=
+0$
+
+$W_s(14 ,1)=
+0$
+
+$W_s(14 ,2)=
+\sin(\alpha4)*(1.0*\cos(\alpha3)*\sin(\alpha1)*\sin(\alpha2)*\sin(q2) + \cos(q2)*\sin(\alpha1)*\sin(\alpha3)*\sin(q3) + 1.0*\cos(\alpha2)*\cos(q3)*\sin(\alpha1)*\sin(\alpha3)*\sin(q2)) + d4*(1.0*\cos(\alpha3)*\sin(\alpha1)*\sin(\alpha2)*\sin(q2) + \cos(q2)*\sin(\alpha1)*\sin(\alpha3)*\sin(q3) + 1.0*\cos(\alpha2)*\cos(q3)*\sin(\alpha1)*\sin(\alpha3)*\sin(q2)) - 1.0*\cos(\alpha4)*\sin(q4)*(\cos(q2)*\cos(q3)*\sin(\alpha1) - \cos(\alpha2)*\sin(\alpha1)*\sin(q2)*\sin(q3)) - \cos(\alpha4)*\cos(q4)*(1.0*\cos(\alpha3)*\cos(q2)*\sin(\alpha1)*\sin(q3) - 1.0*\sin(\alpha1)*\sin(\alpha2)*\sin(\alpha3)*\sin(q2) + \cos(\alpha2)*\cos(\alpha3)*\cos(q3)*\sin(\alpha1)*\sin(q2)) + a2*\cos(q2)*\sin(\alpha1) + a4*\cos(q4)*(\cos(q2)*\cos(q3)*\sin(\alpha1) - \cos(\alpha2)*\sin(\alpha1)*\sin(q2)*\sin(q3)) - a4*\sin(q4)*(1.0*\cos(\alpha3)*\cos(q2)*\sin(\alpha1)*\sin(q3) - 1.0*\sin(\alpha1)*\sin(\alpha2)*\sin(\alpha3)*\sin(q2) + \cos(\alpha2)*\cos(\alpha3)*\cos(q3)*\sin(\alpha1)*\sin(q2)) + a3*\cos(q2)*\cos(q3)*\sin(\alpha1) + 1.0*d3*\sin(\alpha1)*\sin(\alpha2)*\sin(q2) - a3*\cos(\alpha2)*\sin(\alpha1)*\sin(q2)*\sin(q3)$
+
+$W_s(14 ,3)=
+d4*(1.0*\sin(\alpha3)*\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + \cos(q3)*\sin(\alpha1)*\sin(\alpha3)*\sin(q2)) + \sin(\alpha4)*(1.0*\sin(\alpha3)*\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + \cos(q3)*\sin(\alpha1)*\sin(\alpha3)*\sin(q2)) - a4*\sin(q4)*(\cos(\alpha3)*\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + 1.0*\cos(\alpha3)*\cos(q3)*\sin(\alpha1)*\sin(q2)) + a4*\cos(q4)*(\cos(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) - \sin(\alpha1)*\sin(q2)*\sin(q3)) - \cos(\alpha4)*\cos(q4)*(\cos(\alpha3)*\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + 1.0*\cos(\alpha3)*\cos(q3)*\sin(\alpha1)*\sin(q2)) + a3*\cos(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) - 1.0*\cos(\alpha4)*\sin(q4)*(\cos(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) - \sin(\alpha1)*\sin(q2)*\sin(q3)) - a3*\sin(\alpha1)*\sin(q2)*\sin(q3)$
+
+$W_s(14 ,4)=
+a4*\cos(q4)*(\sin(\alpha3)*(\cos(\alpha1)*\cos(\alpha2) - 1.0*\cos(q2)*\sin(\alpha1)*\sin(\alpha2)) + \cos(\alpha3)*\cos(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) - 1.0*\cos(\alpha3)*\sin(\alpha1)*\sin(q2)*\sin(q3)) - a4*\sin(q4)*(\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + \cos(q3)*\sin(\alpha1)*\sin(q2)) - 1.0*\cos(\alpha4)*\cos(q4)*(\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + \cos(q3)*\sin(\alpha1)*\sin(q2)) - \cos(\alpha4)*\sin(q4)*(\sin(\alpha3)*(\cos(\alpha1)*\cos(\alpha2) - 1.0*\cos(q2)*\sin(\alpha1)*\sin(\alpha2)) + \cos(\alpha3)*\cos(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) - 1.0*\cos(\alpha3)*\sin(\alpha1)*\sin(q2)*\sin(q3))$
+
+$W_s(14 ,5)=
+0$
+
+$W_s(15 ,1)=
+0$
+
+$W_s(15 ,2)=
+\cos(\alpha4)*(1.0*\cos(\alpha3)*\sin(\alpha1)*\sin(\alpha2)*\sin(q2) + \cos(q2)*\sin(\alpha1)*\sin(\alpha3)*\sin(q3) + 1.0*\cos(\alpha2)*\cos(q3)*\sin(\alpha1)*\sin(\alpha3)*\sin(q2)) + d4*(1.0*\cos(\alpha3)*\sin(\alpha1)*\sin(\alpha2)*\sin(q2) + \cos(q2)*\sin(\alpha1)*\sin(\alpha3)*\sin(q3) + 1.0*\cos(\alpha2)*\cos(q3)*\sin(\alpha1)*\sin(\alpha3)*\sin(q2)) + \sin(\alpha4)*\sin(q4)*(\cos(q2)*\cos(q3)*\sin(\alpha1) - \cos(\alpha2)*\sin(\alpha1)*\sin(q2)*\sin(q3)) + 1.0*\cos(q4)*\sin(\alpha4)*(1.0*\cos(\alpha3)*\cos(q2)*\sin(\alpha1)*\sin(q3) - 1.0*\sin(\alpha1)*\sin(\alpha2)*\sin(\alpha3)*\sin(q2) + \cos(\alpha2)*\cos(\alpha3)*\cos(q3)*\sin(\alpha1)*\sin(q2)) + a2*\cos(q2)*\sin(\alpha1) + a4*\cos(q4)*(\cos(q2)*\cos(q3)*\sin(\alpha1) - \cos(\alpha2)*\sin(\alpha1)*\sin(q2)*\sin(q3)) - a4*\sin(q4)*(1.0*\cos(\alpha3)*\cos(q2)*\sin(\alpha1)*\sin(q3) - 1.0*\sin(\alpha1)*\sin(\alpha2)*\sin(\alpha3)*\sin(q2) + \cos(\alpha2)*\cos(\alpha3)*\cos(q3)*\sin(\alpha1)*\sin(q2)) + a3*\cos(q2)*\cos(q3)*\sin(\alpha1) + 1.0*d3*\sin(\alpha1)*\sin(\alpha2)*\sin(q2) - a3*\cos(\alpha2)*\sin(\alpha1)*\sin(q2)*\sin(q3)$
+
+$W_s(15 ,3)=
+d4*(1.0*\sin(\alpha3)*\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + \cos(q3)*\sin(\alpha1)*\sin(\alpha3)*\sin(q2)) + \cos(\alpha4)*(1.0*\sin(\alpha3)*\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + \cos(q3)*\sin(\alpha1)*\sin(\alpha3)*\sin(q2)) - a4*\sin(q4)*(\cos(\alpha3)*\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + 1.0*\cos(\alpha3)*\cos(q3)*\sin(\alpha1)*\sin(q2)) + a4*\cos(q4)*(\cos(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) - \sin(\alpha1)*\sin(q2)*\sin(q3)) + 1.0*\cos(q4)*\sin(\alpha4)*(\cos(\alpha3)*\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + 1.0*\cos(\alpha3)*\cos(q3)*\sin(\alpha1)*\sin(q2)) + a3*\cos(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + \sin(\alpha4)*\sin(q4)*(\cos(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) - \sin(\alpha1)*\sin(q2)*\sin(q3)) - a3*\sin(\alpha1)*\sin(q2)*\sin(q3)$
+
+$W_s(15 ,4)=
+1.0*\sin(\alpha4)*\sin(q4)*(\sin(\alpha3)*(\cos(\alpha1)*\cos(\alpha2) - 1.0*\cos(q2)*\sin(\alpha1)*\sin(\alpha2)) + \cos(\alpha3)*\cos(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) - 1.0*\cos(\alpha3)*\sin(\alpha1)*\sin(q2)*\sin(q3)) - a4*\sin(q4)*(\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + \cos(q3)*\sin(\alpha1)*\sin(q2)) + a4*\cos(q4)*(\sin(\alpha3)*(\cos(\alpha1)*\cos(\alpha2) - 1.0*\cos(q2)*\sin(\alpha1)*\sin(\alpha2)) + \cos(\alpha3)*\cos(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) - 1.0*\cos(\alpha3)*\sin(\alpha1)*\sin(q2)*\sin(q3)) + \cos(q4)*\sin(\alpha4)*(\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + \cos(q3)*\sin(\alpha1)*\sin(q2))$
+
+$W_s(15 ,5)=
+0$
+
+$W_s(16 ,1)=
+0$
+
+$W_s(16 ,2)=
+0$
+
+$W_s(16 ,3)=
+0$
+
+$W_s(16 ,4)=
+0$
+
+$W_s(16 ,5)=
+0$
+
+$W_s(17 ,1)=
+0$
+
+$W_s(17 ,2)=
+\cos(q5)*(\cos(q4)*(\cos(q2)*\cos(q3)*\sin(\alpha1) - \cos(\alpha2)*\sin(\alpha1)*\sin(q2)*\sin(q3)) - \sin(q4)*(1.0*\cos(\alpha3)*\cos(q2)*\sin(\alpha1)*\sin(q3) - 1.0*\sin(\alpha1)*\sin(\alpha2)*\sin(\alpha3)*\sin(q2) + \cos(\alpha2)*\cos(\alpha3)*\cos(q3)*\sin(\alpha1)*\sin(q2))) - \sin(q5)*(1.0*\cos(\alpha4)*\sin(q4)*(\cos(q2)*\cos(q3)*\sin(\alpha1) - \cos(\alpha2)*\sin(\alpha1)*\sin(q2)*\sin(q3)) - \sin(\alpha4)*(1.0*\cos(\alpha3)*\sin(\alpha1)*\sin(\alpha2)*\sin(q2) + \cos(q2)*\sin(\alpha1)*\sin(\alpha3)*\sin(q3) + 1.0*\cos(\alpha2)*\cos(q3)*\sin(\alpha1)*\sin(\alpha3)*\sin(q2)) + \cos(\alpha4)*\cos(q4)*(1.0*\cos(\alpha3)*\cos(q2)*\sin(\alpha1)*\sin(q3) - 1.0*\sin(\alpha1)*\sin(\alpha2)*\sin(\alpha3)*\sin(q2) + \cos(\alpha2)*\cos(\alpha3)*\cos(q3)*\sin(\alpha1)*\sin(q2)))$
+
+$W_s(17 ,3)=
+- \cos(q5)*(\sin(q4)*(\cos(\alpha3)*\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + 1.0*\cos(\alpha3)*\cos(q3)*\sin(\alpha1)*\sin(q2)) - \cos(q4)*(\cos(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) - \sin(\alpha1)*\sin(q2)*\sin(q3))) - \sin(q5)*(\cos(\alpha4)*\cos(q4)*(\cos(\alpha3)*\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + 1.0*\cos(\alpha3)*\cos(q3)*\sin(\alpha1)*\sin(q2)) - \sin(\alpha4)*(1.0*\sin(\alpha3)*\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + \cos(q3)*\sin(\alpha1)*\sin(\alpha3)*\sin(q2)) + 1.0*\cos(\alpha4)*\sin(q4)*(\cos(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) - \sin(\alpha1)*\sin(q2)*\sin(q3)))$
+
+$W_s(17 ,4)=
+\cos(q5)*(\cos(q4)*(\sin(\alpha3)*(\cos(\alpha1)*\cos(\alpha2) - 1.0*\cos(q2)*\sin(\alpha1)*\sin(\alpha2)) + \cos(\alpha3)*\cos(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) - 1.0*\cos(\alpha3)*\sin(\alpha1)*\sin(q2)*\sin(q3)) - \sin(q4)*(\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + \cos(q3)*\sin(\alpha1)*\sin(q2))) - \sin(q5)*(\cos(\alpha4)*\sin(q4)*(\sin(\alpha3)*(\cos(\alpha1)*\cos(\alpha2) - 1.0*\cos(q2)*\sin(\alpha1)*\sin(\alpha2)) + \cos(\alpha3)*\cos(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) - 1.0*\cos(\alpha3)*\sin(\alpha1)*\sin(q2)*\sin(q3)) + 1.0*\cos(\alpha4)*\cos(q4)*(\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + \cos(q3)*\sin(\alpha1)*\sin(q2)))$
+
+$W_s(17 ,5)=
+\cos(q5)*(\sin(\alpha4)*(\cos(\alpha3)*(\cos(\alpha1)*\cos(\alpha2) - 1.0*\cos(q2)*\sin(\alpha1)*\sin(\alpha2)) - 1.0*\cos(q3)*\sin(\alpha3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + \sin(\alpha1)*\sin(\alpha3)*\sin(q2)*\sin(q3)) + \cos(\alpha4)*\cos(q4)*(\sin(\alpha3)*(\cos(\alpha1)*\cos(\alpha2) - 1.0*\cos(q2)*\sin(\alpha1)*\sin(\alpha2)) + \cos(\alpha3)*\cos(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) - 1.0*\cos(\alpha3)*\sin(\alpha1)*\sin(q2)*\sin(q3)) - 1.0*\cos(\alpha4)*\sin(q4)*(\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + \cos(q3)*\sin(\alpha1)*\sin(q2))) - \sin(q5)*(\sin(q4)*(\sin(\alpha3)*(\cos(\alpha1)*\cos(\alpha2) - 1.0*\cos(q2)*\sin(\alpha1)*\sin(\alpha2)) + \cos(\alpha3)*\cos(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) - 1.0*\cos(\alpha3)*\sin(\alpha1)*\sin(q2)*\sin(q3)) + \cos(q4)*(\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + \cos(q3)*\sin(\alpha1)*\sin(q2)))$
+
+$W_s(18 ,1)=
+0$
+
+$W_s(18 ,2)=
+\sin(\alpha5)*(\cos(\alpha4)*(1.0*\cos(\alpha3)*\sin(\alpha1)*\sin(\alpha2)*\sin(q2) + \cos(q2)*\sin(\alpha1)*\sin(\alpha3)*\sin(q3) + 1.0*\cos(\alpha2)*\cos(q3)*\sin(\alpha1)*\sin(\alpha3)*\sin(q2)) + \sin(\alpha4)*\sin(q4)*(\cos(q2)*\cos(q3)*\sin(\alpha1) - \cos(\alpha2)*\sin(\alpha1)*\sin(q2)*\sin(q3)) + 1.0*\cos(q4)*\sin(\alpha4)*(1.0*\cos(\alpha3)*\cos(q2)*\sin(\alpha1)*\sin(q3) - 1.0*\sin(\alpha1)*\sin(\alpha2)*\sin(\alpha3)*\sin(q2) + \cos(\alpha2)*\cos(\alpha3)*\cos(q3)*\sin(\alpha1)*\sin(q2))) - 1.0*\cos(\alpha5)*\sin(q5)*(\cos(q4)*(\cos(q2)*\cos(q3)*\sin(\alpha1) - \cos(\alpha2)*\sin(\alpha1)*\sin(q2)*\sin(q3)) - \sin(q4)*(1.0*\cos(\alpha3)*\cos(q2)*\sin(\alpha1)*\sin(q3) - 1.0*\sin(\alpha1)*\sin(\alpha2)*\sin(\alpha3)*\sin(q2) + \cos(\alpha2)*\cos(\alpha3)*\cos(q3)*\sin(\alpha1)*\sin(q2))) - \cos(\alpha5)*\cos(q5)*(1.0*\cos(\alpha4)*\sin(q4)*(\cos(q2)*\cos(q3)*\sin(\alpha1) - \cos(\alpha2)*\sin(\alpha1)*\sin(q2)*\sin(q3)) - \sin(\alpha4)*(1.0*\cos(\alpha3)*\sin(\alpha1)*\sin(\alpha2)*\sin(q2) + \cos(q2)*\sin(\alpha1)*\sin(\alpha3)*\sin(q3) + 1.0*\cos(\alpha2)*\cos(q3)*\sin(\alpha1)*\sin(\alpha3)*\sin(q2)) + \cos(\alpha4)*\cos(q4)*(1.0*\cos(\alpha3)*\cos(q2)*\sin(\alpha1)*\sin(q3) - 1.0*\sin(\alpha1)*\sin(\alpha2)*\sin(\alpha3)*\sin(q2) + \cos(\alpha2)*\cos(\alpha3)*\cos(q3)*\sin(\alpha1)*\sin(q2)))$
+
+$W_s(18 ,3)=
+\sin(\alpha5)*(\cos(\alpha4)*(1.0*\sin(\alpha3)*\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + \cos(q3)*\sin(\alpha1)*\sin(\alpha3)*\sin(q2)) + 1.0*\cos(q4)*\sin(\alpha4)*(\cos(\alpha3)*\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + 1.0*\cos(\alpha3)*\cos(q3)*\sin(\alpha1)*\sin(q2)) + \sin(\alpha4)*\sin(q4)*(\cos(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) - \sin(\alpha1)*\sin(q2)*\sin(q3))) + 1.0*\cos(\alpha5)*\sin(q5)*(\sin(q4)*(\cos(\alpha3)*\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + 1.0*\cos(\alpha3)*\cos(q3)*\sin(\alpha1)*\sin(q2)) - \cos(q4)*(\cos(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) - \sin(\alpha1)*\sin(q2)*\sin(q3))) - \cos(\alpha5)*\cos(q5)*(\cos(\alpha4)*\cos(q4)*(\cos(\alpha3)*\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + 1.0*\cos(\alpha3)*\cos(q3)*\sin(\alpha1)*\sin(q2)) - \sin(\alpha4)*(1.0*\sin(\alpha3)*\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + \cos(q3)*\sin(\alpha1)*\sin(\alpha3)*\sin(q2)) + 1.0*\cos(\alpha4)*\sin(q4)*(\cos(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) - \sin(\alpha1)*\sin(q2)*\sin(q3)))$
+
+$W_s(18 ,4)=
+\sin(\alpha5)*(1.0*\sin(\alpha4)*\sin(q4)*(\sin(\alpha3)*(\cos(\alpha1)*\cos(\alpha2) - 1.0*\cos(q2)*\sin(\alpha1)*\sin(\alpha2)) + \cos(\alpha3)*\cos(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) - 1.0*\cos(\alpha3)*\sin(\alpha1)*\sin(q2)*\sin(q3)) + \cos(q4)*\sin(\alpha4)*(\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + \cos(q3)*\sin(\alpha1)*\sin(q2))) - \cos(\alpha5)*\cos(q5)*(\cos(\alpha4)*\sin(q4)*(\sin(\alpha3)*(\cos(\alpha1)*\cos(\alpha2) - 1.0*\cos(q2)*\sin(\alpha1)*\sin(\alpha2)) + \cos(\alpha3)*\cos(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) - 1.0*\cos(\alpha3)*\sin(\alpha1)*\sin(q2)*\sin(q3)) + 1.0*\cos(\alpha4)*\cos(q4)*(\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + \cos(q3)*\sin(\alpha1)*\sin(q2))) - 1.0*\cos(\alpha5)*\sin(q5)*(\cos(q4)*(\sin(\alpha3)*(\cos(\alpha1)*\cos(\alpha2) - 1.0*\cos(q2)*\sin(\alpha1)*\sin(\alpha2)) + \cos(\alpha3)*\cos(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) - 1.0*\cos(\alpha3)*\sin(\alpha1)*\sin(q2)*\sin(q3)) - \sin(q4)*(\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + \cos(q3)*\sin(\alpha1)*\sin(q2)))$
+
+$W_s(18 ,5)=
+- \cos(\alpha5)*\sin(q5)*(\sin(\alpha4)*(\cos(\alpha3)*(\cos(\alpha1)*\cos(\alpha2) - 1.0*\cos(q2)*\sin(\alpha1)*\sin(\alpha2)) - 1.0*\cos(q3)*\sin(\alpha3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + \sin(\alpha1)*\sin(\alpha3)*\sin(q2)*\sin(q3)) + \cos(\alpha4)*\cos(q4)*(\sin(\alpha3)*(\cos(\alpha1)*\cos(\alpha2) - 1.0*\cos(q2)*sin(\alpha1)*sin(\alpha2)) + \cos(\alpha3)*\cos(q3)*(\cos(\alpha1)*sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) - 1.0*\cos(\alpha3)*\sin(\alpha1)*\sin(q2)*\sin(q3)) - 1.0*\cos(\alpha4)*\sin(q4)*(\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + \cos(q3)*\sin(\alpha1)*\sin(q2))) - 1.0*\cos(\alpha5)*\cos(q5)*(\sin(q4)*(\sin(\alpha3)*(\cos(\alpha1)*\cos(\alpha2) - 1.0*\cos(q2)*\sin(\alpha1)*\sin(\alpha2)) + \cos(\alpha3)*\cos(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) - 1.0*\cos(\alpha3)*\sin(\alpha1)*\sin(q2)*\sin(q3)) + \cos(q4)*(\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + \cos(q3)*\sin(\alpha1)*\sin(q2)))$
+
+$W_s(19 ,1)=
+0$
+
+$W_s(19 ,2)=
+\cos(\alpha5)*(\cos(\alpha4)*(1.0*\cos(\alpha3)*\sin(\alpha1)*\sin(\alpha2)*\sin(q2) + \cos(q2)*\sin(\alpha1)*\sin(\alpha3)*\sin(q3) + 1.0*\cos(\alpha2)*\cos(q3)*\sin(\alpha1)*\sin(\alpha3)*\sin(q2)) + \sin(\alpha4)*\sin(q4)*(\cos(q2)*\cos(q3)*\sin(\alpha1) - \cos(\alpha2)*\sin(\alpha1)*\sin(q2)*\sin(q3)) + 1.0*\cos(q4)*\sin(\alpha4)*(1.0*\cos(\alpha3)*\cos(q2)*\sin(\alpha1)*\sin(q3) - 1.0*\sin(\alpha1)*\sin(\alpha2)*\sin(\alpha3)*\sin(q2) + \cos(\alpha2)*\cos(\alpha3)*\cos(q3)*\sin(\alpha1)*\sin(q2))) + 1.0*\cos(q5)*\sin(\alpha5)*(1.0*\cos(\alpha4)*\sin(q4)*(\cos(q2)*\cos(q3)*\sin(\alpha1) - \cos(\alpha2)*\sin(\alpha1)*\sin(q2)*\sin(q3)) - \sin(\alpha4)*(1.0*\cos(\alpha3)*\sin(\alpha1)*\sin(\alpha2)*\sin(q2) + \cos(q2)*\sin(\alpha1)*\sin(\alpha3)*\sin(q3) + 1.0*\cos(\alpha2)*\cos(q3)*\sin(\alpha1)*\sin(\alpha3)*\sin(q2)) + \cos(\alpha4)*\cos(q4)*(1.0*\cos(\alpha3)*\cos(q2)*\sin(\alpha1)*\sin(q3) - 1.0*\sin(\alpha1)*\sin(\alpha2)*\sin(\alpha3)*\sin(q2) + \cos(\alpha2)*\cos(\alpha3)*\cos(q3)*\sin(\alpha1)*\sin(q2))) + \sin(\alpha5)*\sin(q5)*(\cos(q4)*(\cos(q2)*\cos(q3)*\sin(\alpha1) - \cos(\alpha2)*\sin(\alpha1)*\sin(q2)*\sin(q3)) - \sin(q4)*(1.0*\cos(\alpha3)*\cos(q2)*\sin(\alpha1)*\sin(q3) - 1.0*\sin(\alpha1)*\sin(\alpha2)*\sin(\alpha3)*\sin(q2) + \cos(\alpha2)*\cos(\alpha3)*\cos(q3)*\sin(\alpha1)*\sin(q2)))$
+
+$W_s(19 ,3)=
+\cos(\alpha5)*(\cos(\alpha4)*(1.0*\sin(\alpha3)*\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + \cos(q3)*\sin(\alpha1)*\sin(\alpha3)*\sin(q2)) + 1.0*\cos(q4)*\sin(\alpha4)*(\cos(\alpha3)*\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + 1.0*\cos(\alpha3)*\cos(q3)*\sin(\alpha1)*\sin(q2)) + \sin(\alpha4)*\sin(q4)*(\cos(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) - \sin(\alpha1)*\sin(q2)*\sin(q3))) - \sin(\alpha5)*\sin(q5)*(\sin(q4)*(\cos(\alpha3)*\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + 1.0*\cos(\alpha3)*\cos(q3)*\sin(\alpha1)*\sin(q2)) - \cos(q4)*(\cos(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) - \sin(\alpha1)*\sin(q2)*\sin(q3))) + 1.0*\cos(q5)*\sin(\alpha5)*(\cos(\alpha4)*\cos(q4)*(\cos(\alpha3)*\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + 1.0*\cos(\alpha3)*\cos(q3)*\sin(\alpha1)*\sin(q2)) - \sin(\alpha4)*(1.0*\sin(\alpha3)*\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + \cos(q3)*\sin(\alpha1)*\sin(\alpha3)*\sin(q2)) + 1.0*\cos(\alpha4)*\sin(q4)*(\cos(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) - \sin(\alpha1)*\sin(q2)*\sin(q3)))$
+
+$W_s(19 ,4)=
+\cos(\alpha5)*(1.0*\sin(\alpha4)*\sin(q4)*(\sin(\alpha3)*(\cos(\alpha1)*\cos(\alpha2) - 1.0*\cos(q2)*\sin(\alpha1)*\sin(\alpha2)) + \cos(\alpha3)*\cos(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) - 1.0*\cos(\alpha3)*\sin(\alpha1)*\sin(q2)*\sin(q3)) + \cos(q4)*\sin(\alpha4)*(\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + \cos(q3)*\sin(\alpha1)*\sin(q2))) + 1.0*\cos(q5)*\sin(\alpha5)*(\cos(\alpha4)*\sin(q4)*(\sin(\alpha3)*(\cos(\alpha1)*\cos(\alpha2) - 1.0*\cos(q2)*\sin(\alpha1)*\sin(\alpha2)) + \cos(\alpha3)*\cos(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) - 1.0*\cos(\alpha3)*\sin(\alpha1)*\sin(q2)*\sin(q3)) + 1.0*\cos(\alpha4)*\cos(q4)*(\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + \cos(q3)*\sin(\alpha1)*\sin(q2))) + \sin(\alpha5)*\sin(q5)*(\cos(q4)*(\sin(\alpha3)*(\cos(\alpha1)*\cos(\alpha2) - 1.0*\cos(q2)*\sin(\alpha1)*\sin(\alpha2)) + \cos(\alpha3)*\cos(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) - 1.0*\cos(\alpha3)*\sin(\alpha1)*\sin(q2)*\sin(q3)) - \sin(q4)*(\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + \cos(q3)*\sin(\alpha1)*\sin(q2)))$
+
+$W_s(19 ,5)=
+1.0*\sin(\alpha5)*\sin(q5)*(\sin(\alpha4)*(\cos(\alpha3)*(\cos(\alpha1)*\cos(\alpha2) - 1.0*\cos(q2)*\sin(\alpha1)*\sin(\alpha2)) - 1.0*\cos(q3)*\sin(\alpha3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + \sin(\alpha1)*\sin(\alpha3)*\sin(q2)*\sin(q3)) + \cos(\alpha4)*\cos(q4)*(\sin(\alpha3)*(\cos(\alpha1)*\cos(\alpha2) - 1.0*\cos(q2)*\sin(\alpha1)*\sin(\alpha2)) + \cos(\alpha3)*\cos(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) - 1.0*\cos(\alpha3)*\sin(\alpha1)*\sin(q2)*\sin(q3)) - 1.0*\cos(\alpha4)*\sin(q4)*(\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + \cos(q3)*\sin(\alpha1)*\sin(q2))) + \cos(q5)*\sin(\alpha5)*(\sin(q4)*(\sin(\alpha3)*(\cos(\alpha1)*\cos(\alpha2) - 1.0*\cos(q2)*\sin(\alpha1)*\sin(\alpha2)) + \cos(\alpha3)*\cos(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) - 1.0*\cos(\alpha3)*\sin(\alpha1)*\sin(q2)*\sin(q3)) + \cos(q4)*(\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + \cos(q3)*\sin(\alpha1)*\sin(q2)))$
+
+$W_s(20 ,1)=
+0$
+
+$W_s(20 ,2)=
+d4*(1.0*\cos(\alpha3)*\sin(\alpha1)*\sin(\alpha2)*\sin(q2) + \cos(q2)*\sin(\alpha1)*\sin(\alpha3)*\sin(q3) + 1.0*\cos(\alpha2)*\cos(q3)*\sin(\alpha1)*\sin(\alpha3)*\sin(q2)) + d5*(\cos(\alpha4)*(1.0*\cos(\alpha3)*\sin(\alpha1)*\sin(\alpha2)*\sin(q2) + \cos(q2)*\sin(\alpha1)*\sin(\alpha3)*\sin(q3) + 1.0*\cos(\alpha2)*\cos(q3)*\sin(\alpha1)*\sin(\alpha3)*\sin(q2)) + \sin(\alpha4)*\sin(q4)*(\cos(q2)*\cos(q3)*\sin(\alpha1) - \cos(\alpha2)*\sin(\alpha1)*\sin(q2)*\sin(q3)) + 1.0*\cos(q4)*\sin(\alpha4)*(1.0*\cos(\alpha3)*\cos(q2)*\sin(\alpha1)*\sin(q3) - 1.0*\sin(\alpha1)*\sin(\alpha2)*\sin(\alpha3)*\sin(q2) + \cos(\alpha2)*\cos(\alpha3)*\cos(q3)*\sin(\alpha1)*\sin(q2))) + a2*\cos(q2)*\sin(\alpha1) + a4*\cos(q4)*(\cos(q2)*\cos(q3)*\sin(\alpha1) - \cos(\alpha2)*\sin(\alpha1)*\sin(q2)*\sin(q3)) - a5*\sin(q5)*(1.0*\cos(\alpha4)*\sin(q4)*(\cos(q2)*\cos(q3)*\sin(\alpha1) - \cos(\alpha2)*\sin(\alpha1)*\sin(q2)*\sin(q3)) - \sin(\alpha4)*(1.0*\cos(\alpha3)*\sin(\alpha1)*\sin(\alpha2)*\sin(q2) + \cos(q2)*\sin(\alpha1)*\sin(\alpha3)*\sin(q3) + 1.0*\cos(\alpha2)*\cos(q3)*\sin(\alpha1)*\sin(\alpha3)*\sin(q2)) + \cos(\alpha4)*\cos(q4)*(1.0*\cos(\alpha3)*\cos(q2)*\sin(\alpha1)*\sin(q3) - 1.0*\sin(\alpha1)*\sin(\alpha2)*\sin(\alpha3)*\sin(q2) + \cos(\alpha2)*\cos(\alpha3)*\cos(q3)*\sin(\alpha1)*\sin(q2))) + a5*\cos(q5)*(\cos(q4)*(\cos(q2)*\cos(q3)*\sin(\alpha1) - \cos(\alpha2)*\sin(\alpha1)*\sin(q2)*\sin(q3)) - \sin(q4)*(1.0*\cos(\alpha3)*\cos(q2)*\sin(\alpha1)*\sin(q3) - 1.0*\sin(\alpha1)*\sin(\alpha2)*\sin(\alpha3)*\sin(q2) + \cos(\alpha2)*\cos(\alpha3)*\cos(q3)*\sin(\alpha1)*\sin(q2))) - a4*\sin(q4)*(1.0*\cos(\alpha3)*\cos(q2)*\sin(\alpha1)*\sin(q3) - 1.0*\sin(\alpha1)*\sin(\alpha2)*\sin(\alpha3)*\sin(q2) + \cos(\alpha2)*\cos(\alpha3)*\cos(q3)*\sin(\alpha1)*\sin(q2)) + a3*\cos(q2)*\cos(q3)*\sin(\alpha1) + 1.0*d3*\sin(\alpha1)*\sin(\alpha2)*\sin(q2) - a3*\cos(\alpha2)*\sin(\alpha1)*\sin(q2)*\sin(q3)$
+
+$W_s(20 ,3)=
+d4*(1.0*\sin(\alpha3)*\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + \cos(q3)*\sin(\alpha1)*\sin(\alpha3)*\sin(q2)) + d5*(\cos(\alpha4)*(1.0*\sin(\alpha3)*\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + \cos(q3)*\sin(\alpha1)*\sin(\alpha3)*\sin(q2)) + 1.0*\cos(q4)*\sin(\alpha4)*(\cos(\alpha3)*\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + 1.0*\cos(\alpha3)*\cos(q3)*\sin(\alpha1)*\sin(q2)) + \sin(\alpha4)*\sin(q4)*(\cos(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) - \sin(\alpha1)*\sin(q2)*\sin(q3))) - a4*\sin(q4)*(\cos(\alpha3)*\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + 1.0*\cos(\alpha3)*\cos(q3)*\sin(\alpha1)*\sin(q2)) + a4*\cos(q4)*(\cos(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) - \sin(\alpha1)*\sin(q2)*\sin(q3)) - a5*\sin(q5)*(\cos(\alpha4)*\cos(q4)*(\cos(\alpha3)*\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + 1.0*\cos(\alpha3)*\cos(q3)*\sin(\alpha1)*\sin(q2)) - \sin(\alpha4)*(1.0*\sin(\alpha3)*\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + \cos(q3)*\sin(\alpha1)*\sin(\alpha3)*\sin(q2)) + 1.0*\cos(\alpha4)*\sin(q4)*(\cos(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) - \sin(\alpha1)*\sin(q2)*\sin(q3))) - a5*\cos(q5)*(\sin(q4)*(\cos(\alpha3)*\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + 1.0*\cos(\alpha3)*\cos(q3)*\sin(\alpha1)*\sin(q2)) - \cos(q4)*(\cos(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) - \sin(\alpha1)*\sin(q2)*\sin(q3))) + a3*\cos(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) - a3*\sin(\alpha1)*\sin(q2)*\sin(q3)$
+
+$W_s(20 ,4)=
+d5*(1.0*\sin(\alpha4)*\sin(q4)*(\sin(\alpha3)*(\cos(\alpha1)*\cos(\alpha2) - 1.0*\cos(q2)*\sin(\alpha1)*\sin(\alpha2)) + \cos(\alpha3)*\cos(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) - 1.0*\cos(\alpha3)*\sin(\alpha1)*\sin(q2)*\sin(q3)) + \cos(q4)*\sin(\alpha4)*(\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + \cos(q3)*\sin(\alpha1)*\sin(q2))) - a5*\sin(q5)*(\cos(\alpha4)*\sin(q4)*(\sin(\alpha3)*(\cos(\alpha1)*\cos(\alpha2) - 1.0*\cos(q2)*\sin(\alpha1)*\sin(\alpha2)) + \cos(\alpha3)*\cos(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) - 1.0*\cos(\alpha3)*\sin(\alpha1)*\sin(q2)*\sin(q3)) + 1.0*\cos(\alpha4)*\cos(q4)*(\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + \cos(q3)*\sin(\alpha1)*\sin(q2))) + a5*\cos(q5)*(\cos(q4)*(\sin(\alpha3)*(\cos(\alpha1)*\cos(\alpha2) - 1.0*\cos(q2)*\sin(\alpha1)*\sin(\alpha2)) + \cos(\alpha3)*\cos(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) - 1.0*\cos(\alpha3)*\sin(\alpha1)*\sin(q2)*\sin(q3)) - \sin(q4)*(\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + \cos(q3)*\sin(\alpha1)*\sin(q2))) - a4*\sin(q4)*(\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + \cos(q3)*\sin(\alpha1)*\sin(q2)) + a4*\cos(q4)*(\sin(\alpha3)*(\cos(\alpha1)*\cos(\alpha2) - 1.0*\cos(q2)*\sin(\alpha1)*\sin(\alpha2)) + \cos(\alpha3)*\cos(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) - 1.0*\cos(\alpha3)*\sin(\alpha1)*\sin(q2)*\sin(q3))$
+
+$W_s(20 ,5)=
+a5*\cos(q5)*(\sin(\alpha4)*(\cos(\alpha3)*(\cos(\alpha1)*\cos(\alpha2) - 1.0*\cos(q2)*\sin(\alpha1)*\sin(\alpha2)) - 1.0*\cos(q3)*\sin(\alpha3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + \sin(\alpha1)*\sin(\alpha3)*\sin(q2)*\sin(q3)) + \cos(\alpha4)*\cos(q4)*(\sin(\alpha3)*(\cos(\alpha1)*\cos(\alpha2) - 1.0*\cos(q2)*\sin(\alpha1)*\sin(\alpha2)) + \cos(\alpha3)*\cos(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) - 1.0*\cos(\alpha3)*\sin(\alpha1)*\sin(q2)*\sin(q3)) - 1.0*\cos(\alpha4)*\sin(q4)*(\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + \cos(q3)*\sin(\alpha1)*\sin(q2))) - a5*\sin(q5)*(\sin(q4)*(\sin(\alpha3)*(\cos(\alpha1)*\cos(\alpha2) - 1.0*\cos(q2)*\sin(\alpha1)*\sin(\alpha2)) + \cos(\alpha3)*\cos(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) - 1.0*\cos(\alpha3)*\sin(\alpha1)*\sin(q2)*\sin(q3)) + \cos(q4)*(\sin(q3)*(\cos(\alpha1)*\sin(\alpha2) + \cos(\alpha2)*\cos(q2)*\sin(\alpha1)) + \cos(q3)*\sin(\alpha1)*\sin(q2)))$
+
+
+
+
+\end{document}

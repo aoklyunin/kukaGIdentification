@@ -1,7 +1,8 @@
-function A = getDH(alpha, a, d, theta)
-   A = [cos(theta), -sin(theta) * cos(alpha), sin(theta) * sin(alpha), a * cos(theta);
-         sin(theta), cos(theta) * cos(alpha), -cos(theta) * sin(alpha), a * sin(theta);
-         0, sin(alpha), cos(alpha), d;
-         0, 0, 0, 1];
+%Решенеи прямой задачи кинематики для модифицированных ДХ параметров
+function T = getDH(Th, Al, A, D)
+                  T = [cos(Th),        -sin(Th),               0,         A;
+                        sin(Th)*cos(Al), cos(Th)*cos(Al), -sin(Al), -D*sin(Al);
+                        sin(Th)*sin(Al), cos(Th)*sin(Al),  cos(Al),  D*cos(Al);
+                                      0,               0,        0,          1];
+              
 end
-

@@ -1,6 +1,6 @@
 function myplot( my,legendY,pathname,position,tit )
 f = figure('pos',[30 60 1600 900]);  
-plot(my,'LineWidth',1);
+plot(my,'LineWidth',2);
 title(tit);
 xlabel('q_4(рад.)');
 legend_handle = legend(legendY,'Interpreter','latex','Location',position);
