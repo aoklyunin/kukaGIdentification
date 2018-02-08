@@ -1,8 +1,9 @@
 clear all;
-load('../workspace/doubleWs1.mat')
+load('../workspace/doubleWs1z.mat')
 load('../workspace/calculated.mat')
 
-theta1 = inv(WS1'*WS1)*WS1'*T(:,1);
+disp(sprintf('число обусловленности регрессора первого звена %.4f',cond(zW1)))
+theta1 = inv(zW1'*zW1)*zW1'*zT1;
 save('../workspace/hatTheta1.mat','theta1');
 
 
