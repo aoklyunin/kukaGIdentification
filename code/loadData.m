@@ -1,5 +1,5 @@
 clear all;
-m = load('../log/exp_2.csv');
+m = load('../log/exp1_gkuka.csv');
  t = m(:,1);
  ft = t(1);
 

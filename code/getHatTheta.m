@@ -1,30 +1,36 @@
 clear all;
-load('../workspace/doubleWs.mat')
-load('../workspace/calculated.mat')
-load('../workspace/F.mat','F');
-load('../workspace/hatTheta.mat');
+load('../workspace/doubleWs.mat');
+load('../workspace/WsFull.mat');
+load('../workspace/calculated.mat');
+load('../workspace/fric.mat');
 
+displayResult = 1;
 
+Tr = [];
+Trf  = [];
+Trfi  = [];
 
-s = size(WS);
-thetaList = [theta];
-eList = [zeros(5,1)];
-k = 1;
-for i=1:1:s(1) 
-    curWS(:,:) = WS(i,:,:);
-    %disp(F*multiSign(T(i,:)')');
-    %disp(T(i,:)');
-    Gm = T(i,:)'+F*multiSign(T(i,:)')';
-    en = curWS'*theta - Gm;
-    eList = [eList en];
-    Pn = P-P*curWS*inv(curWS'*P*curWS+eye(5))*curWS'*P;
-    thetan = theta-Pn*curWS*en;
-    %disp(thetan);
-    thetaList = [thetaList thetan];
-    theta = thetan;
-    P = Pn;
-end
+for i=1:1:size(T,1)
+    Tr = [Trf;T(i,2:5)'];
+    Trf = [Trf;T(i,2:5)'+diag([F2;F3;F4;F5])*multiSign(T(i,2:5))'];
+    Trfi = [Trfi;T(i,2:5)'];
+end;
 
-save('../workspace/hatTheta.mat','thetaList','theta','eList','P');
+theta = inv(WS'*WS)*WS'*Tr;
+thetaf = inv(WS'*WS)*WS'*Trf;
+thetafi = inv(WSfi'*WSfi)*WSfi'*Trfi;
+
+if displayResult
+    disp('theta=');
+    disp(theta);
+    disp('theta_{fc}=');
+    disp(thetaf);
+    disp('theta_{fi}=');
+    disp(thetafi);
+    disp('W=');
+    disp(simplify(WsFull));
+end;
+
+save('../workspace/hatTheta.mat','theta','thetaf','thetafi');
 
 

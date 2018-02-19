@@ -1,0 +1,292 @@
+\documentclass[fleqn, a4paper, 5pt, russian]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1, T2A]{fontenc}
+\usepackage[english, main = russian]{babel}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{natbib}
+\usepackage{pdflscape}
+\usepackage{amsmath,amssymb}
+\usepackage{caption, subcaption}
+\setcounter{MaxMatrixCols}{20}
+\graphicspath{{fig/}}
+
+\captionsetup[figure]{name = Рисунок, labelsep = endash}
+\captionsetup[table]{name = Таблица, labelsep = endash, justification=raggedright, singlelinecheck=false}
+\setlength{\mathindent}{0pt}
+
+\begin{document}
+
+\begin{landscape}
+
+\begin{equation}
+\small{
+	A_{01}=
+	\left(\begin{array}{cccc} \cos\!\left(\mathrm{q1}\right) & 0 & \sin\!\left(\mathrm{q1}\right) & 33\, \cos\!\left(\mathrm{q1}\right)\\ \sin\!\left(\mathrm{q1}\right) & 0 & - \cos\!\left(\mathrm{q1}\right) & 33\, \sin\!\left(\mathrm{q1}\right)\\ 0 & 1 & 0 & 147\\ 0 & 0 & 0 & 1 \end{array}\right)
+}\end{equation}
+\begin{equation}
+\small{
+	A_{12}=
+	\left(\begin{array}{cccc} \cos\!\left(\mathrm{q2}\right) & - \sin\!\left(\mathrm{q2}\right) & 0 & 155\, \cos\!\left(\mathrm{q2}\right)\\ \sin\!\left(\mathrm{q2}\right) & \cos\!\left(\mathrm{q2}\right) & 0 & 155\, \sin\!\left(\mathrm{q2}\right)\\ 0 & 0 & 1 & 0\\ 0 & 0 & 0 & 1 \end{array}\right)
+}\end{equation}
+\begin{equation}
+\small{
+	A_{23}=
+	\left(\begin{array}{cccc} \cos\!\left(\mathrm{q3}\right) & - \sin\!\left(\mathrm{q3}\right) & 0 & 135\, \cos\!\left(\mathrm{q3}\right)\\ \sin\!\left(\mathrm{q3}\right) & \cos\!\left(\mathrm{q3}\right) & 0 & 135\, \sin\!\left(\mathrm{q3}\right)\\ 0 & 0 & 1 & 0\\ 0 & 0 & 0 & 1 \end{array}\right)
+}\end{equation}
+\begin{equation}
+\small{
+	A_{34}=
+	\left(\begin{array}{cccc} - \sin\!\left(\mathrm{q4}\right) & - \cos\!\left(\mathrm{q4}\right) & 0 & -\frac{568\, \sin\!\left(\mathrm{q4}\right)}{5}\\ \cos\!\left(\mathrm{q4}\right) & - \sin\!\left(\mathrm{q4}\right) & 0 & \frac{568\, \cos\!\left(\mathrm{q4}\right)}{5}\\ 0 & 0 & 1 & 0\\ 0 & 0 & 0 & 1 \end{array}\right)
+}\end{equation}
+\begin{equation}
+\small{
+	A_{45}=
+	\left(\begin{array}{cccc} \cos\!\left(\mathrm{q5}\right) & - \sin\!\left(\mathrm{q5}\right) & 0 & 0\\ \sin\!\left(\mathrm{q5}\right) & \cos\!\left(\mathrm{q5}\right) & 0 & 0\\ 0 & 0 & 1 & \frac{1429}{25}\\ 0 & 0 & 0 & 1 \end{array}\right)
+}\end{equation}
+\begin{equation}
+\small{
+	A_{01}=
+	\left(\begin{array}{cccc} \cos\!\left(\mathrm{q1}\right) & - \sin\!\left(\mathrm{q1}\right) & 0 & 0\\ \sin\!\left(\mathrm{q1}\right) & \cos\!\left(\mathrm{q1}\right) & 0 & 0\\ 0 & 0 & 1 & 0\\ 0 & 0 & 0 & 1 \end{array}\right)
+}\end{equation}
+\begin{equation}
+\small{
+	A_{02}=
+	\left(\begin{array}{cccc} \cos\!\left(\mathrm{q1}\right)\, \cos\!\left(\mathrm{q2}\right) & - \cos\!\left(\mathrm{q1}\right)\, \sin\!\left(\mathrm{q2}\right) & \sin\!\left(\mathrm{q1}\right) & 33\, \cos\!\left(\mathrm{q1}\right)\\ \cos\!\left(\mathrm{q2}\right)\, \sin\!\left(\mathrm{q1}\right) & - \sin\!\left(\mathrm{q1}\right)\, \sin\!\left(\mathrm{q2}\right) & - \cos\!\left(\mathrm{q1}\right) & 33\, \sin\!\left(\mathrm{q1}\right)\\ \sin\!\left(\mathrm{q2}\right) & \cos\!\left(\mathrm{q2}\right) & 0 & 147\\ 0 & 0 & 0 & 1 \end{array}\right)
+}\end{equation}
+\begin{equation}
+\small{
+	A_{03}=
+	\left(\begin{array}{cccc} \cos\!\left(\mathrm{q2} + \mathrm{q3}\right)\, \cos\!\left(\mathrm{q1}\right) & - \sin\!\left(\mathrm{q2} + \mathrm{q3}\right)\, \cos\!\left(\mathrm{q1}\right) & \sin\!\left(\mathrm{q1}\right) & \cos\!\left(\mathrm{q1}\right)\, \left(155\, \cos\!\left(\mathrm{q2}\right) + 33\right)\\ \cos\!\left(\mathrm{q2} + \mathrm{q3}\right)\, \sin\!\left(\mathrm{q1}\right) & - \sin\!\left(\mathrm{q2} + \mathrm{q3}\right)\, \sin\!\left(\mathrm{q1}\right) & - \cos\!\left(\mathrm{q1}\right) & \sin\!\left(\mathrm{q1}\right)\, \left(155\, \cos\!\left(\mathrm{q2}\right) + 33\right)\\ \sin\!\left(\mathrm{q2} + \mathrm{q3}\right) & \cos\!\left(\mathrm{q2} + \mathrm{q3}\right) & 0 & 155\, \sin\!\left(\mathrm{q2}\right) + 147\\ 0 & 0 & 0 & 1 \end{array}\right)
+}\end{equation}
+\begin{equation}
+\small{
+	A_{04}=
+	\left(\begin{array}{cccc} \cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right)\, \cos\!\left(\mathrm{q1}\right) & - \sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right)\, \cos\!\left(\mathrm{q1}\right) & \sin\!\left(\mathrm{q1}\right) & \cos\!\left(\mathrm{q1}\right)\, \left(135\, \cos\!\left(\mathrm{q2} + \mathrm{q3}\right) + 155\, \cos\!\left(\mathrm{q2}\right) + 33\right)\\ \cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right)\, \sin\!\left(\mathrm{q1}\right) & - \sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right)\, \sin\!\left(\mathrm{q1}\right) & - \cos\!\left(\mathrm{q1}\right) & \sin\!\left(\mathrm{q1}\right)\, \left(135\, \cos\!\left(\mathrm{q2} + \mathrm{q3}\right) + 155\, \cos\!\left(\mathrm{q2}\right) + 33\right)\\ \sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right) & \cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right) & 0 & 135\, \sin\!\left(\mathrm{q2} + \mathrm{q3}\right) + 155\, \sin\!\left(\mathrm{q2}\right) + 147\\ 0 & 0 & 0 & 1 \end{array}\right)
+}\end{equation}
+\begin{equation}
+\small{
+	A_{05}=
+	\left(\begin{array}{cccc}  - \sin\!\left(\mathrm{q1}\right)\, \sin\!\left(\mathrm{q5}\right) - \frac{\cos\!\left(\mathrm{q5}\right)\, \left(\sin\!\left(\mathrm{q1} + \mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right) - \sin\!\left(\mathrm{q1} - \mathrm{q2} - \mathrm{q3} - \mathrm{q4}\right)\right)}{2} & \sin\!\left(\mathrm{q5}\right)\, \left(\frac{\sin\!\left(\mathrm{q1} + \mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right)}{2} - \frac{\sin\!\left(\mathrm{q1} - \mathrm{q2} - \mathrm{q3} - \mathrm{q4}\right)}{2}\right) - \cos\!\left(\mathrm{q5}\right)\, \sin\!\left(\mathrm{q1}\right) &  - \frac{\cos\!\left(\mathrm{q1} + \mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right)}{2} - \frac{\cos\!\left(\mathrm{q1} - \mathrm{q2} - \mathrm{q3} - \mathrm{q4}\right)}{2} & \frac{\cos\!\left(\mathrm{q1}\right)\, \left(675\, \cos\!\left(\mathrm{q2} + \mathrm{q3}\right) - 568\, \sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right) + 775\, \cos\!\left(\mathrm{q2}\right) + 165\right)}{5}\\ \cos\!\left(\mathrm{q1}\right)\, \sin\!\left(\mathrm{q5}\right) + \cos\!\left(\mathrm{q5}\right)\, \left(\frac{\cos\!\left(\mathrm{q1} + \mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right)}{2} - \frac{\cos\!\left(\mathrm{q1} - \mathrm{q2} - \mathrm{q3} - \mathrm{q4}\right)}{2}\right) & \cos\!\left(\mathrm{q1}\right)\, \cos\!\left(\mathrm{q5}\right) - \frac{\sin\!\left(\mathrm{q5}\right)\, \left(\cos\!\left(\mathrm{q1} + \mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right) - \cos\!\left(\mathrm{q1} - \mathrm{q2} - \mathrm{q3} - \mathrm{q4}\right)\right)}{2} &  - \frac{\sin\!\left(\mathrm{q1} + \mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right)}{2} - \frac{\sin\!\left(\mathrm{q1} - \mathrm{q2} - \mathrm{q3} - \mathrm{q4}\right)}{2} & \frac{\sin\!\left(\mathrm{q1}\right)\, \left(675\, \cos\!\left(\mathrm{q2} + \mathrm{q3}\right) - 568\, \sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right) + 775\, \cos\!\left(\mathrm{q2}\right) + 165\right)}{5}\\ \frac{\cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} + \mathrm{q5}\right)}{2} + \frac{\cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} - \mathrm{q5}\right)}{2} & \frac{\sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} - \mathrm{q5}\right)}{2} - \frac{\sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} + \mathrm{q5}\right)}{2} & - \sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right) & \frac{568\, \cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right)}{5} + 135\, \sin\!\left(\mathrm{q2} + \mathrm{q3}\right) + 155\, \sin\!\left(\mathrm{q2}\right) + 147\\ 0 & 0 & 0 & 1 \end{array}\right)
+}\end{equation}
+\begin{equation}
+\small{
+	w_1=
+	\left(\begin{array}{cccc} 0 & 0 & 1 & 0 \end{array}\right)
+}\end{equation}
+\begin{equation}
+\small{
+	w_2=
+	\left(\begin{array}{cccc} \sin\!\left(\mathrm{q2}\right) & \cos\!\left(\mathrm{q2}\right) & 0 & 147 \end{array}\right)
+}\end{equation}
+\begin{equation}
+\small{
+	w_3=
+	\left(\begin{array}{cccc} \sin\!\left(\mathrm{q2} + \mathrm{q3}\right) & \cos\!\left(\mathrm{q2} + \mathrm{q3}\right) & 0 & 155\, \sin\!\left(\mathrm{q2}\right) + 147 \end{array}\right)
+}\end{equation}
+\begin{equation}
+\small{
+	w_4=
+	\left(\begin{array}{cccc} \sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right) & \cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right) & 0 & 135\, \sin\!\left(\mathrm{q2} + \mathrm{q3}\right) + 155\, \sin\!\left(\mathrm{q2}\right) + 147 \end{array}\right)
+}\end{equation}
+\begin{equation}
+\small{
+	w_5=
+	\left(\begin{array}{cccc} \frac{\cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} + \mathrm{q5}\right)}{2} + \frac{\cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} - \mathrm{q5}\right)}{2} & \frac{\sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} - \mathrm{q5}\right)}{2} - \frac{\sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} + \mathrm{q5}\right)}{2} & - \sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right) & \frac{568\, \cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right)}{5} + 135\, \sin\!\left(\mathrm{q2} + \mathrm{q3}\right) + 155\, \sin\!\left(\mathrm{q2}\right) + 147 \end{array}\right)
+}\end{equation}
+\begin{equation}
+\small{
+	p_1=
+	g\, \mathrm{m1}\, \mathrm{rz1}
+}\end{equation}
+\begin{equation}
+\small{
+	p_2=
+	g\, \mathrm{m2}\, \left(\mathrm{ry2}\, \cos\!\left(\mathrm{q2}\right) + \mathrm{rx2}\, \sin\!\left(\mathrm{q2}\right) + 147\right)
+}\end{equation}
+\begin{equation}
+\small{
+	p_3=
+	g\, \mathrm{m3}\, \left(155\, \sin\!\left(\mathrm{q2}\right) + \mathrm{ry3}\, \cos\!\left(\mathrm{q2} + \mathrm{q3}\right) + \mathrm{rx3}\, \sin\!\left(\mathrm{q2} + \mathrm{q3}\right) + 147\right)
+}\end{equation}
+\begin{equation}
+\small{
+	p_4=
+	g\, \mathrm{m4}\, \left(135\, \sin\!\left(\mathrm{q2} + \mathrm{q3}\right) + 155\, \sin\!\left(\mathrm{q2}\right) + \mathrm{ry4}\, \cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right) + \mathrm{rx4}\, \sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right) + 147\right)
+}\end{equation}
+
+$p_5=
+	\frac{g\, \mathrm{m5}\, \left(1136\, \cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right) + 1350\, \sin\!\left(\mathrm{q2} + \mathrm{q3}\right) + 1550\, \sin\!\left(\mathrm{q2}\right) + 5\, \mathrm{rx5}\, \cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} + \mathrm{q5}\right) - 5\, \mathrm{ry5}\, \sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} + \mathrm{q5}\right) + 5\, \mathrm{rx5}\, \cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} - \mathrm{q5}\right) + 5\, \mathrm{ry5}\, \sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} - \mathrm{q5}\right) - 10\, \mathrm{rz5}\, \sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right) + 1470\right)}{10}
+$
+
+$
+P_1=
+\frac{g\, \left(1470\, \mathrm{m2} + 1470\, \mathrm{m3} + 1470\, \mathrm{m4} + 1470\, \mathrm{m5} + 10\, \mathrm{m1}\, \mathrm{rz1} + 1350\, \mathrm{m4}\, \sin\!\left(\mathrm{q2} + \mathrm{q3}\right) + 1350\, \mathrm{m5}\, \sin\!\left(\mathrm{q2} + \mathrm{q3}\right) + 1550\, \mathrm{m3}\, \sin\!\left(\mathrm{q2}\right) + 1550\, \mathrm{m4}\, \sin\!\left(\mathrm{q2}\right) + 1550\, \mathrm{m5}\, \sin\!\left(\mathrm{q2}\right) + 1136\, \mathrm{m5}\, \cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right) + 10\, \mathrm{m2}\, \mathrm{ry2}\, \cos\!\left(\mathrm{q2}\right) + 10\, \mathrm{m2}\, \mathrm{rx2}\, \sin\!\left(\mathrm{q2}\right) + 5\, \mathrm{m5}\, \mathrm{rx5}\, \cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} - \mathrm{q5}\right) + 5\, \mathrm{m5}\, \mathrm{ry5}\, \sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} - \mathrm{q5}\right) + 10\, \mathrm{m4}\, \mathrm{ry4}\, \cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right) + 10\, \mathrm{m4}\, \mathrm{rx4}\, \sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right) - 10\, \mathrm{m5}\, \mathrm{rz5}\, \sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right) + 5\, \mathrm{m5}\, \mathrm{rx5}\, \cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} + \mathrm{q5}\right) - 5\, \mathrm{m5}\, \mathrm{ry5}\, \sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} + \mathrm{q5}\right) + 10\, \mathrm{m3}\, \mathrm{ry3}\, \cos\!\left(\mathrm{q2} + \mathrm{q3}\right) + 10\, \mathrm{m3}\, \mathrm{rx3}\, \sin\!\left(\mathrm{q2} + \mathrm{q3}\right)\right)}{10}
+$
+
+$
+P_2=
+\frac{g\, \left(1470\, \mathrm{m2} + 1470\, \mathrm{m3} + 1470\, \mathrm{m4} + 1470\, \mathrm{m5} + 1350\, \mathrm{m4}\, \sin\!\left(\mathrm{q2} + \mathrm{q3}\right) + 1350\, \mathrm{m5}\, \sin\!\left(\mathrm{q2} + \mathrm{q3}\right) + 1550\, \mathrm{m3}\, \sin\!\left(\mathrm{q2}\right) + 1550\, \mathrm{m4}\, \sin\!\left(\mathrm{q2}\right) + 1550\, \mathrm{m5}\, \sin\!\left(\mathrm{q2}\right) + 1136\, \mathrm{m5}\, \cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right) + 10\, \mathrm{m2}\, \mathrm{ry2}\, \cos\!\left(\mathrm{q2}\right) + 10\, \mathrm{m2}\, \mathrm{rx2}\, \sin\!\left(\mathrm{q2}\right) + 5\, \mathrm{m5}\, \mathrm{rx5}\, \cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} - \mathrm{q5}\right) + 5\, \mathrm{m5}\, \mathrm{ry5}\, \sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} - \mathrm{q5}\right) + 10\, \mathrm{m4}\, \mathrm{ry4}\, \cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right) + 10\, \mathrm{m4}\, \mathrm{rx4}\, \sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right) - 10\, \mathrm{m5}\, \mathrm{rz5}\, \sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right) + 5\, \mathrm{m5}\, \mathrm{rx5}\, \cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} + \mathrm{q5}\right) - 5\, \mathrm{m5}\, \mathrm{ry5}\, \sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} + \mathrm{q5}\right) + 10\, \mathrm{m3}\, \mathrm{ry3}\, \cos\!\left(\mathrm{q2} + \mathrm{q3}\right) + 10\, \mathrm{m3}\, \mathrm{rx3}\, \sin\!\left(\mathrm{q2} + \mathrm{q3}\right)\right)}{10}
+$
+
+$
+P_3=
+\frac{g\, \left(1470\, \mathrm{m3} + 1470\, \mathrm{m4} + 1470\, \mathrm{m5} + 1350\, \mathrm{m4}\, \sin\!\left(\mathrm{q2} + \mathrm{q3}\right) + 1350\, \mathrm{m5}\, \sin\!\left(\mathrm{q2} + \mathrm{q3}\right) + 1550\, \mathrm{m3}\, \sin\!\left(\mathrm{q2}\right) + 1550\, \mathrm{m4}\, \sin\!\left(\mathrm{q2}\right) + 1550\, \mathrm{m5}\, \sin\!\left(\mathrm{q2}\right) + 1136\, \mathrm{m5}\, \cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right) + 5\, \mathrm{m5}\, \mathrm{rx5}\, \cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} - \mathrm{q5}\right) + 5\, \mathrm{m5}\, \mathrm{ry5}\, \sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} - \mathrm{q5}\right) + 10\, \mathrm{m4}\, \mathrm{ry4}\, \cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right) + 10\, \mathrm{m4}\, \mathrm{rx4}\, \sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right) - 10\, \mathrm{m5}\, \mathrm{rz5}\, \sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right) + 5\, \mathrm{m5}\, \mathrm{rx5}\, \cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} + \mathrm{q5}\right) - 5\, \mathrm{m5}\, \mathrm{ry5}\, \sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} + \mathrm{q5}\right) + 10\, \mathrm{m3}\, \mathrm{ry3}\, \cos\!\left(\mathrm{q2} + \mathrm{q3}\right) + 10\, \mathrm{m3}\, \mathrm{rx3}\, \sin\!\left(\mathrm{q2} + \mathrm{q3}\right)\right)}{10}
+$
+
+$
+P_4=
+147\, g\, \mathrm{m4} + 147\, g\, \mathrm{m5} + 155\, g\, \mathrm{m4}\, \sin\!\left(\mathrm{q2}\right) + 155\, g\, \mathrm{m5}\, \sin\!\left(\mathrm{q2}\right) + \frac{568\, g\, \mathrm{m5}\, \cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right)}{5} + 135\, g\, \mathrm{m4}\, \sin\!\left(\mathrm{q2} + \mathrm{q3}\right) + 135\, g\, \mathrm{m5}\, \sin\!\left(\mathrm{q2} + \mathrm{q3}\right) + \frac{g\, \mathrm{m5}\, \mathrm{rx5}\, \cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} + \mathrm{q5}\right)}{2} - \frac{g\, \mathrm{m5}\, \mathrm{ry5}\, \sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} + \mathrm{q5}\right)}{2} + \frac{g\, \mathrm{m5}\, \mathrm{rx5}\, \cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} - \mathrm{q5}\right)}{2} + \frac{g\, \mathrm{m5}\, \mathrm{ry5}\, \sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} - \mathrm{q5}\right)}{2} + g\, \mathrm{m4}\, \mathrm{ry4}\, \cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right) + g\, \mathrm{m4}\, \mathrm{rx4}\, \sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right) - g\, \mathrm{m5}\, \mathrm{rz5}\, \sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right)
+$
+
+$
+P_5=
+\frac{g\, \mathrm{m5}\, \left(1136\, \cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right) + 1350\, \sin\!\left(\mathrm{q2} + \mathrm{q3}\right) + 1550\, \sin\!\left(\mathrm{q2}\right) + 5\, \mathrm{rx5}\, \cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} + \mathrm{q5}\right) - 5\, \mathrm{ry5}\, \sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} + \mathrm{q5}\right) + 5\, \mathrm{rx5}\, \cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} - \mathrm{q5}\right) + 5\, \mathrm{ry5}\, \sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} - \mathrm{q5}\right) - 10\, \mathrm{rz5}\, \sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right) + 1470\right)}{10}
+$
+
+\begin{equation}
+\small{
+	W_{1}=
+	\left(\begin{array}{c} 0\\ 0\\ 0\\ 0\\ 0 \end{array}\right)
+}\end{equation}
+\begin{equation}
+\small{
+	W_{2}=
+	\left(\begin{array}{c} 0\\ 0\\ 0\\ 0\\ 0 \end{array}\right)
+}\end{equation}
+\begin{equation}
+\small{
+	W_{3}=
+	\left(\begin{array}{c} 0\\ 0\\ 0\\ 0\\ 0 \end{array}\right)
+}\end{equation}
+\begin{equation}
+\small{
+	W_{4}=
+	\left(\begin{array}{c} 0\\ 0\\ 0\\ 0\\ 0 \end{array}\right)
+}\end{equation}
+\begin{equation}
+\small{
+	W_{5}=
+	\left(\begin{array}{c} 0\\ \cos\!\left(\mathrm{q2}\right)\\ 0\\ 0\\ 0 \end{array}\right)
+}\end{equation}
+\begin{equation}
+\small{
+	W_{6}=
+	\left(\begin{array}{c} 0\\ - \sin\!\left(\mathrm{q2}\right)\\ 0\\ 0\\ 0 \end{array}\right)
+}\end{equation}
+\begin{equation}
+\small{
+	W_{7}=
+	\left(\begin{array}{c} 0\\ 0\\ 0\\ 0\\ 0 \end{array}\right)
+}\end{equation}
+\begin{equation}
+\small{
+	W_{8}=
+	\left(\begin{array}{c} 0\\ 0\\ 0\\ 0\\ 0 \end{array}\right)
+}\end{equation}
+\begin{equation}
+\small{
+	W_{9}=
+	\left(\begin{array}{c} 0\\ \cos\!\left(\mathrm{q2} + \mathrm{q3}\right)\\ \cos\!\left(\mathrm{q2} + \mathrm{q3}\right)\\ 0\\ 0 \end{array}\right)
+}\end{equation}
+\begin{equation}
+\small{
+	W_{10}=
+	\left(\begin{array}{c} 0\\ - \sin\!\left(\mathrm{q2} + \mathrm{q3}\right)\\ - \sin\!\left(\mathrm{q2} + \mathrm{q3}\right)\\ 0\\ 0 \end{array}\right)
+}\end{equation}
+\begin{equation}
+\small{
+	W_{11}=
+	\left(\begin{array}{c} 0\\ 0\\ 0\\ 0\\ 0 \end{array}\right)
+}\end{equation}
+\begin{equation}
+\small{
+	W_{12}=
+	\left(\begin{array}{c} 0\\ 155\, \cos\!\left(\mathrm{q2}\right)\\ 0\\ 0\\ 0 \end{array}\right)
+}\end{equation}
+\begin{equation}
+\small{
+	W_{13}=
+	\left(\begin{array}{c} 0\\ \cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right)\\ \cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right)\\ \cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right)\\ 0 \end{array}\right)
+}\end{equation}
+\begin{equation}
+\small{
+	W_{14}=
+	\left(\begin{array}{c} 0\\ - \sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right)\\ - \sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right)\\ - \sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right)\\ 0 \end{array}\right)
+}\end{equation}
+\begin{equation}
+\small{
+	W_{15}=
+	\left(\begin{array}{c} 0\\ 0\\ 0\\ 0\\ 0 \end{array}\right)
+}\end{equation}
+\begin{equation}
+\small{
+	W_{16}=
+	\left(\begin{array}{c} 0\\ 135\, \cos\!\left(\mathrm{q2} + \mathrm{q3}\right) + 155\, \cos\!\left(\mathrm{q2}\right)\\ 135\, \cos\!\left(\mathrm{q2} + \mathrm{q3}\right)\\ 0\\ 0 \end{array}\right)
+}\end{equation}
+\begin{equation}
+\small{
+	W_{17}=
+	\left(\begin{array}{c} 0\\  - \frac{\sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} + \mathrm{q5}\right)}{2} - \frac{\sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} - \mathrm{q5}\right)}{2}\\  - \frac{\sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} + \mathrm{q5}\right)}{2} - \frac{\sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} - \mathrm{q5}\right)}{2}\\  - \frac{\sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} + \mathrm{q5}\right)}{2} - \frac{\sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} - \mathrm{q5}\right)}{2}\\ \frac{\sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} - \mathrm{q5}\right)}{2} - \frac{\sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} + \mathrm{q5}\right)}{2} \end{array}\right)
+}\end{equation}
+\begin{equation}
+\small{
+	W_{18}=
+	\left(\begin{array}{c} 0\\ \frac{\cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} - \mathrm{q5}\right)}{2} - \frac{\cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} + \mathrm{q5}\right)}{2}\\ \frac{\cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} - \mathrm{q5}\right)}{2} - \frac{\cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} + \mathrm{q5}\right)}{2}\\ \frac{\cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} - \mathrm{q5}\right)}{2} - \frac{\cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} + \mathrm{q5}\right)}{2}\\  - \frac{\cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} + \mathrm{q5}\right)}{2} - \frac{\cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} - \mathrm{q5}\right)}{2} \end{array}\right)
+}\end{equation}
+\begin{equation}
+\small{
+	W_{19}=
+	\left(\begin{array}{c} 0\\ - \cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right)\\ - \cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right)\\ - \cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right)\\ 0 \end{array}\right)
+}\end{equation}
+\begin{equation}
+\small{
+	W_{20}=
+	\left(\begin{array}{c} 0\\ 135\, \cos\!\left(\mathrm{q2} + \mathrm{q3}\right) - \frac{568\, \sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right)}{5} + 155\, \cos\!\left(\mathrm{q2}\right)\\ 135\, \cos\!\left(\mathrm{q2} + \mathrm{q3}\right) - \frac{568\, \sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right)}{5}\\ -\frac{568\, \sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right)}{5}\\ 0 \end{array}\right)
+}\end{equation}
+\begin{equation}
+\small{
+	W_{1_R}=
+	\left(\begin{array}{c} - \sin\!\left(\mathrm{q2}\right)\\ 0\\ 0\\ 0 \end{array}\right)
+}\end{equation}
+\begin{equation}
+\small{
+	W_{2_R}=
+	\left(\begin{array}{c} \cos\!\left(\mathrm{q2} + \mathrm{q3}\right)\\ \cos\!\left(\mathrm{q2} + \mathrm{q3}\right)\\ 0\\ 0 \end{array}\right)
+}\end{equation}
+\begin{equation}
+\small{
+	W_{3_R}=
+	\left(\begin{array}{c} - \sin\!\left(\mathrm{q2} + \mathrm{q3}\right)\\ - \sin\!\left(\mathrm{q2} + \mathrm{q3}\right)\\ 0\\ 0 \end{array}\right)
+}\end{equation}
+\begin{equation}
+\small{
+	W_{4_R}=
+	\left(\begin{array}{c} 155\, \cos\!\left(\mathrm{q2}\right)\\ 0\\ 0\\ 0 \end{array}\right)
+}\end{equation}
+\begin{equation}
+\small{
+	W_{5_R}=
+	\left(\begin{array}{c} \cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right)\\ \cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right)\\ \cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right)\\ 0 \end{array}\right)
+}\end{equation}
+\begin{equation}
+\small{
+	W_{6_R}=
+	\left(\begin{array}{c} - \sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right)\\ - \sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right)\\ - \sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4}\right)\\ 0 \end{array}\right)
+}\end{equation}
+\begin{equation}
+\small{
+	W_{7_R}=
+	\left(\begin{array}{c}  - \frac{\sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} + \mathrm{q5}\right)}{2} - \frac{\sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} - \mathrm{q5}\right)}{2}\\  - \frac{\sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} + \mathrm{q5}\right)}{2} - \frac{\sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} - \mathrm{q5}\right)}{2}\\  - \frac{\sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} + \mathrm{q5}\right)}{2} - \frac{\sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} - \mathrm{q5}\right)}{2}\\ \frac{\sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} - \mathrm{q5}\right)}{2} - \frac{\sin\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} + \mathrm{q5}\right)}{2} \end{array}\right)
+}\end{equation}
+\begin{equation}
+\small{
+	W_{8_R}=
+	\left(\begin{array}{c} \frac{\cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} - \mathrm{q5}\right)}{2} - \frac{\cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} + \mathrm{q5}\right)}{2}\\ \frac{\cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} - \mathrm{q5}\right)}{2} - \frac{\cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} + \mathrm{q5}\right)}{2}\\ \frac{\cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} - \mathrm{q5}\right)}{2} - \frac{\cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} + \mathrm{q5}\right)}{2}\\  - \frac{\cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} + \mathrm{q5}\right)}{2} - \frac{\cos\!\left(\mathrm{q2} + \mathrm{q3} + \mathrm{q4} - \mathrm{q5}\right)}{2} \end{array}\right)
+}\end{equation}
+
+
+\end{landscape}
+	
+\end{document}

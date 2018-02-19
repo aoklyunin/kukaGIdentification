@@ -1,6 +1,15 @@
 clear all;
 load('../workspace/measured.mat')
+ 
+% фильтруем через Баттерворта
 
+%j1f = filtfilt(
+
+%myplot([j1 j2 j3 j4 j5],{'$j_1~$','$j_2~$','$j_3~$','$j_4~$','$j_5~$'}, '..\imgs\data_not_filtered_j.jpg','northwest','NotFiltered');
+
+
+    
+    
 s = size(j1);
 flg = 0;
 b = [];

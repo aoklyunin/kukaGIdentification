@@ -1,12 +1,17 @@
 clear all;
 load('../workspace/calculated.mat')
-load('../workspace/Ws.mat')
+load('../workspace/WsFullR.mat')
 
 s = size(T);
 WS=[]; 
-for i=1:1:s(1)   
-   Wm = double(subs(Ws,[q1 q2 q3 q4 q5],[J(i,1)  J(i,2)  J(i,3)  J(i,4) J(i,5)]));
-   WS(i,:,:) = Wm;
+WSfi = [];
+%fileID = fopen('../log/doubleWS.txt','w');
+for i=1:1:s(1)
+   if mod(i,100)==0
+       disp(i/s(1));
+   end;
+   Wm = double(subs(WsFullR,[q1 q2 q3 q4 q5],[J(i,1)  J(i,2)  J(i,3)  J(i,4) J(i,5)]));
+   WS = [WS; Wm ];
+   WSfi = [WSfi; [Wm diag(multiSign(T(i,2:5)))] ];
 end
-
-save('../workspace/doubleWs.mat','WS');
+save('../workspace/doubleWs.mat','WS','WSfi');
