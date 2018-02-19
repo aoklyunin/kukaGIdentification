@@ -1,0 +1,507 @@
+% !TeX encoding = windows-1251
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Sample document for preparing papers to  "Avtomatika i Telemekhanika"
+%%  charset=windows-1251
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt,final]{a&t}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{verbatim}
+\usepackage{amsmath}
+\usepackage{epstopdf}
+\usepackage{cite}
+
+%%%%%% настройка заголовков и подзаголовков float блоков (figure/table)
+\usepackage{subcaption}
+\captionsetup{compatibility=false}
+
+\DeclareCaptionSubType[asbuk]{figure} % кирилица для нумерации подрисунков
+
+\captionsetup[figure]{% настройки подписей рисунков
+	labelsep=period,% разделить нумерационной части рисунка и подписи
+	textformat=period%добавить точку в конце
+} 
+\captionsetup[sub]{% настройки дочерних подписей
+	subrefformat=simple, % Формат ссылок, например, для \ref будет 4a (без разделителей), для \subref будет просто a (без скобок)
+	labelsep=none,% нумерационной части рисунка и подписи
+	textformat=simple,% печатать подпись без изменения (без точки)
+	justification=centering,% настройка выравнивания
+	singlelinecheck=true,% не растягивать короткие подписи,
+	skip=0pt% подвинуть подпись к рисунку
+}
+%%%%%%%%
+
+
+\graphicspath{{../imgs/}}
+
+
+%\renewcommand{\theequation}{\arabic{section}.\arabic{equation}}
+%\newtheorem{theorem}{Theorem}
+%\newtheorem{lemma}[theorem]{Lemma}
+%\newtheorem{remark}{Remark}
+%\newtheorem{assumption}{\hspace{\parindent}}%[section]
+
+%\newtheorem{definition}{Definition}[section]
+%\newtheorem{proposition}{Proposition}[section]
+%\newtheorem{corollary}{Corollary}[section]
+%\newtheorem{fact}{Fact}[section]
+%\newtheorem{example}{Example}[section]
+%\newtheorem{claim}[assumption]{Claim}
+%\newtheorem{proof}{Proof}
+
+
+\renewcommand{\thefootnote}{\arabic{footnote})}
+
+\newtheorem{assumption}{\hspace{\parindent}Д\,о\,п\,у\,щ\,е\,н\,и\,е\,}%[section]
+
+\linespread{2}
+
+\year{2017}
+\title{Оценивание параметров робота-манипулятора Kuka Youbot}%
+
+\thanks{}
+
+\authors{А.О. Клюнин $^{1}$ (aoklyunin@gmail.com)\\ А.~А.~Пыркин$^{1}$, д-р. техн. наук (a.pyrkin@gmail.com)\\  
+($^1$Университет ИТМО)
+}
+
+\abstract{Предложен новый алгоритм оценивания параметров механических параметров динамической модели робота. }
+
+\begin{document}
+\maketitle
+
+%\section{Введение}
+%\label{section_introduction}
+
+
+\section{Введение}
+Здесь надо что-то написать, но я пока не придумал, что. 
+
+\section{Постановка задачи}
+
+Выберем следующую динамическую модель робота:
+\begin{equation}
+	\label{dynamicModel}
+	H(q)\ddot{q}+C(q,\dot{q})\dot{q}+G(q)=\tau,
+\end{equation}
+
+где $q$ - вектор обобщённых координат, $H(q)$ - тензор инерции, $C(q,\dot{q})\dot{q}$ - момент вязкого трения, $G(q)$ - момент силы гравитации, $\tau$ - сумма моментов, действующих на сочленение.
+
+\newpage
+\section{Без среза}
+	\begin{equation}\theta=\begin{bmatrix} 2.130\\ -3.369\\ 0.426\\ 0.027\\ 0.905\\ 2.232\\ -0.140\\ -0.049\\\end{bmatrix}\end{equation}\begin{equation}\theta_i=\begin{bmatrix} 1.771\\ -2.757\\ 0.388\\ 0.022\\ 0.697\\ 1.650\\ -0.122\\ -0.042\\ 0.325\\ 0.046\\ 0.066\\ 0.273\\\end{bmatrix}\end{equation}
+
+\section{SDT 0.1}
+\begin{equation}\theta=\begin{bmatrix} 2.130\\ -3.369\\ 0.426\\ 0.027\\ 0.905\\ 2.232\\ -0.140\\ -0.049\\\end{bmatrix}\end{equation}\begin{equation}\theta_i=\begin{bmatrix} 1.771\\ -2.757\\ 0.388\\ 0.022\\ 0.697\\ 1.650\\ -0.122\\ -0.042\\ 0.325\\ 0.046\\ 0.066\\ 0.273\\\end{bmatrix}\end{equation}
+\section{STD 0.3}
+\begin{equation}\theta=\begin{bmatrix} 2.029\\ -3.281\\ 0.312\\ 0.027\\ 0.896\\ 2.263\\ -0.133\\ 0.037\\\end{bmatrix}\end{equation}\begin{equation}\theta_i=\begin{bmatrix} 1.616\\ -2.652\\ 0.314\\ 0.022\\ 0.692\\ 1.566\\ -0.100\\ 0.009\\ 0.401\\ 0.185\\ 0.167\\ 0.311\\\end{bmatrix}\end{equation}
+
+\section{STD 0.5}
+\begin{equation}\theta=\begin{bmatrix} 2.038\\ -3.326\\ 0.355\\ 0.027\\ 0.873\\ 2.279\\ -0.165\\ -0.021\\\end{bmatrix}\end{equation}\begin{equation}\theta_i=\begin{bmatrix} 1.690\\ -2.730\\ 0.343\\ 0.023\\ 0.685\\ 1.635\\ -0.126\\ -0.015\\ 0.320\\ 0.125\\ 0.110\\ 0.300\\\end{bmatrix}\end{equation}
+
+\section{STD 1}
+\begin{equation}\theta=\begin{bmatrix} 2.110\\ -3.338\\ 0.406\\ 0.027\\ 0.886\\ 2.253\\ -0.150\\ -0.048\\\end{bmatrix}\end{equation}\begin{equation}\theta_i=\begin{bmatrix} 1.759\\ -2.720\\ 0.386\\ 0.023\\ 0.688\\ 1.652\\ -0.126\\ -0.028\\ 0.311\\ 0.098\\ 0.074\\ 0.294\\\end{bmatrix}\end{equation}
+
+
+\newpage
+
+
+\pagestyle{empty}
+
+%адаптивность
+\begin{figure}[hp]
+	\linespread{1.4}
+	
+	\captionsetup[subfigure]{labelformat=empty}
+	\subcaptionbox{\label{fig:multi_omega3} Первое звено}%
+	{\subref{fig:multi_omega3}\linebreak\includegraphics[width=0.48\textwidth]{calculated/meanT_sr_0_1}}
+	\hfill
+	\subcaptionbox{\label{fig:multi_ampl3} Второе звено}
+	{\subref{fig:multi_ampl3}\linebreak\includegraphics[width=0.48\textwidth]{calculated/meanT_sr_0_2}}
+	\\ \vspace{3mm}
+	
+	\subcaptionbox{\label{fig:multi_sigma3} Третье звено}%
+	{\subref{fig:multi_sigma3}\linebreak\includegraphics[width=0.48\textwidth]{calculated/meanT_sr_0_3}}
+	\hfill
+	\subcaptionbox{\label{fig:multi_phi3} Четвёртое звено}
+	{\subref{fig:multi_phi3}\linebreak\includegraphics[width=0.48\textwidth]{calculated/meanT_sr_0_4}}
+	\\ \vspace{3mm}
+	
+	\subcaptionbox{\label{fig:multi_xi3} Пятое звено}%
+	{\subref{fig:multi_xi3}\linebreak\includegraphics[width=0.48\textwidth]{calculated/meanT_sr_0_5}}
+	\hfill
+	
+	\caption{\label{fig:multiparameters3} Полки без среза}
+\end{figure}
+
+\newpage
+
+
+\pagestyle{empty}
+
+%адаптивность
+\begin{figure}[hp]
+		\linespread{1.4}
+	\captionsetup[subfigure]{labelformat=empty}
+		
+	\subcaptionbox{\label{fig:multi_ampl3} Второе звено}
+	{\subref{fig:multi_ampl3}\linebreak\includegraphics[width=0.48\textwidth]{identificated/sr_0_online_tau_2}}	
+	\subcaptionbox{\label{fig:multi_sigma3} Третье звено}%
+	{\subref{fig:multi_sigma3}\linebreak\includegraphics[width=0.48\textwidth]{identificated/sr_0_online_tau_3}}	\\ \vspace{3mm}
+	
+	\subcaptionbox{\label{fig:multi_phi3} Четвёртое звено}
+	{\subref{fig:multi_phi3}\linebreak\includegraphics[width=0.48\textwidth]{identificated/sr_0_online_tau_4}}
+	\subcaptionbox{\label{fig:multi_xi3} Пятое звено}%
+	{\subref{fig:multi_xi3}\linebreak\includegraphics[width=0.48\textwidth]{identificated/sr_0_online_tau_5}}	\\ \vspace{3mm}
+	
+	\caption{\label{fig:multiparameters3} Оценка моментов без среза}
+\end{figure}
+
+\newpage
+
+
+\pagestyle{empty}
+
+%адаптивность
+\begin{figure}[hp]
+	\linespread{1.4}
+	\captionsetup[subfigure]{labelformat=empty}
+	
+	\subcaptionbox{\label{fig:multi_ampl3} Второе звено}
+	{\subref{fig:multi_ampl3}\linebreak\includegraphics[width=0.48\textwidth]{identificated/sr_0_trapezidal_tau_2}}	
+	\subcaptionbox{\label{fig:multi_sigma3} Третье звено}%
+	{\subref{fig:multi_sigma3}\linebreak\includegraphics[width=0.48\textwidth]{identificated/sr_0_trapezidal_tau_3}}	\\ \vspace{3mm}
+	
+	\subcaptionbox{\label{fig:multi_phi3} Четвёртое звено}
+	{\subref{fig:multi_phi3}\linebreak\includegraphics[width=0.48\textwidth]{identificated/sr_0_trapezidal_tau_4}}
+	\subcaptionbox{\label{fig:multi_xi3} Пятое звено}%
+	{\subref{fig:multi_xi3}\linebreak\includegraphics[width=0.48\textwidth]{identificated/sr_0_trapezidal_tau_5}}	\\ \vspace{3mm}
+	
+	\caption{\label{fig:multiparameters3} Оценка моментов с постоянными коэффициентами трения без среза}
+\end{figure}
+
+
+
+
+\newpage
+
+
+
+\pagestyle{empty}
+
+%адаптивность
+\begin{figure}[hp]
+	\linespread{1.4}
+	
+	\captionsetup[subfigure]{labelformat=empty}
+	\subcaptionbox{\label{fig:multi_omega3} Первое звено}%
+	{\subref{fig:multi_omega3}\linebreak\includegraphics[width=0.48\textwidth]{calculated/meanT_sr_10_1}}
+	\hfill
+	\subcaptionbox{\label{fig:multi_ampl3} Второе звено}
+	{\subref{fig:multi_ampl3}\linebreak\includegraphics[width=0.48\textwidth]{calculated/meanT_sr_10_2}}
+	\\ \vspace{3mm}
+	
+	\subcaptionbox{\label{fig:multi_sigma3} Третье звено}%
+	{\subref{fig:multi_sigma3}\linebreak\includegraphics[width=0.48\textwidth]{calculated/meanT_sr_10_3}}
+	\hfill
+	\subcaptionbox{\label{fig:multi_phi3} Четвёртое звено}
+	{\subref{fig:multi_phi3}\linebreak\includegraphics[width=0.48\textwidth]{calculated/meanT_sr_10_4}}
+	\\ \vspace{3mm}
+	
+	\subcaptionbox{\label{fig:multi_xi3} Пятое звено}%
+	{\subref{fig:multi_xi3}\linebreak\includegraphics[width=0.48\textwidth]{calculated/meanT_sr_10_5}}
+	\hfill
+	
+	\caption{\label{fig:multiparameters3} Полки SDT 0.1}
+\end{figure}
+
+\newpage
+
+
+\pagestyle{empty}
+
+%адаптивность
+\begin{figure}[hp]
+	\linespread{1.4}
+	\captionsetup[subfigure]{labelformat=empty}
+	
+	\subcaptionbox{\label{fig:multi_ampl3} Второе звено}
+	{\subref{fig:multi_ampl3}\linebreak\includegraphics[width=0.48\textwidth]{identificated/sr_10_online_tau_2}}	
+	\subcaptionbox{\label{fig:multi_sigma3} Третье звено}%
+	{\subref{fig:multi_sigma3}\linebreak\includegraphics[width=0.48\textwidth]{identificated/sr_10_online_tau_3}}	\\ \vspace{3mm}
+	
+	\subcaptionbox{\label{fig:multi_phi3} Четвёртое звено}
+	{\subref{fig:multi_phi3}\linebreak\includegraphics[width=0.48\textwidth]{identificated/sr_10_online_tau_4}}
+	\subcaptionbox{\label{fig:multi_xi3} Пятое звено}%
+	{\subref{fig:multi_xi3}\linebreak\includegraphics[width=0.48\textwidth]{identificated/sr_10_online_tau_5}}	\\ \vspace{3mm}
+	
+	\caption{\label{fig:multiparameters3} Оценка моментов SDT 0.1}
+\end{figure}
+
+
+\newpage
+
+
+\pagestyle{empty}
+
+%адаптивность
+\begin{figure}[hp]
+	\linespread{1.4}
+	\captionsetup[subfigure]{labelformat=empty}
+	
+	\subcaptionbox{\label{fig:multi_ampl3} Второе звено}
+	{\subref{fig:multi_ampl3}\linebreak\includegraphics[width=0.48\textwidth]{identificated/sr_10_trapezidal_tau_2}}	
+	\subcaptionbox{\label{fig:multi_sigma3} Третье звено}%
+	{\subref{fig:multi_sigma3}\linebreak\includegraphics[width=0.48\textwidth]{identificated/sr_10_trapezidal_tau_3}}	\\ \vspace{3mm}
+	
+	\subcaptionbox{\label{fig:multi_phi3} Четвёртое звено}
+	{\subref{fig:multi_phi3}\linebreak\includegraphics[width=0.48\textwidth]{identificated/sr_10_trapezidal_tau_4}}
+	\subcaptionbox{\label{fig:multi_xi3} Пятое звено}%
+	{\subref{fig:multi_xi3}\linebreak\includegraphics[width=0.48\textwidth]{identificated/sr_10_trapezidal_tau_5}}	\\ \vspace{3mm}
+	
+	\caption{\label{fig:multiparameters3} Оценка моментов с постоянными коэффициентами трения SDT 0.1}
+\end{figure}
+
+
+\newpage
+
+\pagestyle{empty}
+
+%адаптивность
+\begin{figure}[hp]
+	\linespread{1.4}
+	
+	\captionsetup[subfigure]{labelformat=empty}
+	\subcaptionbox{\label{fig:multi_omega3} Первое звено}%
+	{\subref{fig:multi_omega3}\linebreak\includegraphics[width=0.48\textwidth]{calculated/meanT_sr_30_1}}
+	\hfill
+	\subcaptionbox{\label{fig:multi_ampl3} Второе звено}
+	{\subref{fig:multi_ampl3}\linebreak\includegraphics[width=0.48\textwidth]{calculated/meanT_sr_30_2}}
+	\\ \vspace{3mm}
+	
+	\subcaptionbox{\label{fig:multi_sigma3} Третье звено}%
+	{\subref{fig:multi_sigma3}\linebreak\includegraphics[width=0.48\textwidth]{calculated/meanT_sr_30_3}}
+	\hfill
+	\subcaptionbox{\label{fig:multi_phi3} Четвёртое звено}
+	{\subref{fig:multi_phi3}\linebreak\includegraphics[width=0.48\textwidth]{calculated/meanT_sr_30_4}}
+	\\ \vspace{3mm}
+	
+	\subcaptionbox{\label{fig:multi_xi3} Пятое звено}%
+	{\subref{fig:multi_xi3}\linebreak\includegraphics[width=0.48\textwidth]{calculated/meanT_sr_30_5}}
+	\hfill
+	
+	\caption{\label{fig:multiparameters3} Полки STD 0.3}
+\end{figure}
+
+\newpage
+
+
+\pagestyle{empty}
+
+%адаптивность
+\begin{figure}[hp]
+	\linespread{1.4}
+	\captionsetup[subfigure]{labelformat=empty}
+	
+	\subcaptionbox{\label{fig:multi_ampl3} Второе звено}
+	{\subref{fig:multi_ampl3}\linebreak\includegraphics[width=0.48\textwidth]{identificated/sr_30_online_tau_2}}	
+	\subcaptionbox{\label{fig:multi_sigma3} Третье звено}%
+	{\subref{fig:multi_sigma3}\linebreak\includegraphics[width=0.48\textwidth]{identificated/sr_30_online_tau_3}}	\\ \vspace{3mm}
+	
+	\subcaptionbox{\label{fig:multi_phi3} Четвёртое звено}
+	{\subref{fig:multi_phi3}\linebreak\includegraphics[width=0.48\textwidth]{identificated/sr_30_online_tau_4}}
+	\subcaptionbox{\label{fig:multi_xi3} Пятое звено}%
+	{\subref{fig:multi_xi3}\linebreak\includegraphics[width=0.48\textwidth]{identificated/sr_30_online_tau_5}}	\\ \vspace{3mm}
+	
+	\caption{\label{fig:multiparameters3} Оценка моментов STD 0.3}
+\end{figure}
+
+
+\newpage
+
+
+\pagestyle{empty}
+
+%адаптивность
+\begin{figure}[hp]
+	\linespread{1.4}
+	\captionsetup[subfigure]{labelformat=empty}
+	
+	\subcaptionbox{\label{fig:multi_ampl3} Второе звено}
+	{\subref{fig:multi_ampl3}\linebreak\includegraphics[width=0.48\textwidth]{identificated/sr_30_trapezidal_tau_2}}	
+	\subcaptionbox{\label{fig:multi_sigma3} Третье звено}%
+	{\subref{fig:multi_sigma3}\linebreak\includegraphics[width=0.48\textwidth]{identificated/sr_30_trapezidal_tau_3}}	\\ \vspace{3mm}
+	
+	\subcaptionbox{\label{fig:multi_phi3} Четвёртое звено}
+	{\subref{fig:multi_phi3}\linebreak\includegraphics[width=0.48\textwidth]{identificated/sr_30_trapezidal_tau_4}}
+	\subcaptionbox{\label{fig:multi_xi3} Пятое звено}%
+	{\subref{fig:multi_xi3}\linebreak\includegraphics[width=0.48\textwidth]{identificated/sr_30_trapezidal_tau_5}}	\\ \vspace{3mm}
+	
+	\caption{\label{fig:multiparameters3} Оценка моментов с постоянными коэффициентами трения STD 0.3}
+\end{figure}
+
+
+\newpage
+
+
+
+\pagestyle{empty}
+
+%адаптивность
+\begin{figure}[hp]
+	\linespread{1.4}
+	
+	\captionsetup[subfigure]{labelformat=empty}
+	\subcaptionbox{\label{fig:multi_omega3} Первое звено}%
+	{\subref{fig:multi_omega3}\linebreak\includegraphics[width=0.48\textwidth]{calculated/meanT_sr_50_1}}
+	\hfill
+	\subcaptionbox{\label{fig:multi_ampl3} Второе звено}
+	{\subref{fig:multi_ampl3}\linebreak\includegraphics[width=0.48\textwidth]{calculated/meanT_sr_50_2}}
+	\\ \vspace{3mm}
+	
+	\subcaptionbox{\label{fig:multi_sigma3} Третье звено}%
+	{\subref{fig:multi_sigma3}\linebreak\includegraphics[width=0.48\textwidth]{calculated/meanT_sr_50_3}}
+	\hfill
+	\subcaptionbox{\label{fig:multi_phi3} Четвёртое звено}
+	{\subref{fig:multi_phi3}\linebreak\includegraphics[width=0.48\textwidth]{calculated/meanT_sr_50_4}}
+	\\ \vspace{3mm}
+	
+	\subcaptionbox{\label{fig:multi_xi3} Пятое звено}%
+	{\subref{fig:multi_xi3}\linebreak\includegraphics[width=0.48\textwidth]{calculated/meanT_sr_50_5}}
+	\hfill
+	
+	\caption{\label{fig:multiparameters3} Полки STD 0.5}
+\end{figure}
+
+\newpage
+
+
+\pagestyle{empty}
+
+%адаптивность
+\begin{figure}[hp]
+	\linespread{1.4}
+	\captionsetup[subfigure]{labelformat=empty}
+	
+	\subcaptionbox{\label{fig:multi_ampl3} Второе звено}
+	{\subref{fig:multi_ampl3}\linebreak\includegraphics[width=0.48\textwidth]{identificated/sr_50_online_tau_2}}	
+	\subcaptionbox{\label{fig:multi_sigma3} Третье звено}%
+	{\subref{fig:multi_sigma3}\linebreak\includegraphics[width=0.48\textwidth]{identificated/sr_50_online_tau_3}}	\\ \vspace{3mm}
+	
+	\subcaptionbox{\label{fig:multi_phi3} Четвёртое звено}
+	{\subref{fig:multi_phi3}\linebreak\includegraphics[width=0.48\textwidth]{identificated/sr_50_online_tau_4}}
+	\subcaptionbox{\label{fig:multi_xi3} Пятое звено}%
+	{\subref{fig:multi_xi3}\linebreak\includegraphics[width=0.48\textwidth]{identificated/sr_50_online_tau_5}}	\\ \vspace{3mm}
+	
+	\caption{\label{fig:multiparameters3} Оценка моментов STD 0.5}
+\end{figure}
+
+
+\newpage
+
+
+\pagestyle{empty}
+
+%адаптивность
+\begin{figure}[hp]
+	\linespread{1.4}
+	\captionsetup[subfigure]{labelformat=empty}
+	
+	\subcaptionbox{\label{fig:multi_ampl3} Второе звено}
+	{\subref{fig:multi_ampl3}\linebreak\includegraphics[width=0.48\textwidth]{identificated/sr_50_trapezidal_tau_2}}	
+	\subcaptionbox{\label{fig:multi_sigma3} Третье звено}%
+	{\subref{fig:multi_sigma3}\linebreak\includegraphics[width=0.48\textwidth]{identificated/sr_50_trapezidal_tau_3}}	\\ \vspace{3mm}
+	
+	\subcaptionbox{\label{fig:multi_phi3} Четвёртое звено}
+	{\subref{fig:multi_phi3}\linebreak\includegraphics[width=0.48\textwidth]{identificated/sr_50_trapezidal_tau_4}}
+	\subcaptionbox{\label{fig:multi_xi3} Пятое звено}%
+	{\subref{fig:multi_xi3}\linebreak\includegraphics[width=0.48\textwidth]{identificated/sr_50_trapezidal_tau_5}}	\\ \vspace{3mm}
+	
+	\caption{\label{fig:multiparameters3} Оценка моментов с постоянными коэффициентами трения STD 0.5}
+\end{figure}
+
+
+
+
+\newpage
+
+
+\pagestyle{empty}
+
+%адаптивность
+\begin{figure}[hp]
+	\linespread{1.4}
+	
+	\captionsetup[subfigure]{labelformat=empty}
+	\subcaptionbox{\label{fig:multi_omega3} Первое звено}%
+	{\subref{fig:multi_omega3}\linebreak\includegraphics[width=0.48\textwidth]{calculated/meanT_sr_100_1}}
+	\hfill
+	\subcaptionbox{\label{fig:multi_ampl3} Второе звено}
+	{\subref{fig:multi_ampl3}\linebreak\includegraphics[width=0.48\textwidth]{calculated/meanT_sr_100_2}}
+	\\ \vspace{3mm}
+	
+	\subcaptionbox{\label{fig:multi_sigma3} Третье звено}%
+	{\subref{fig:multi_sigma3}\linebreak\includegraphics[width=0.48\textwidth]{calculated/meanT_sr_100_3}}
+	\hfill
+	\subcaptionbox{\label{fig:multi_phi3} Четвёртое звено}
+	{\subref{fig:multi_phi3}\linebreak\includegraphics[width=0.48\textwidth]{calculated/meanT_sr_100_4}}
+	\\ \vspace{3mm}
+	
+	\subcaptionbox{\label{fig:multi_xi3} Пятое звено}%
+	{\subref{fig:multi_xi3}\linebreak\includegraphics[width=0.48\textwidth]{calculated/meanT_sr_100_5}}
+	\hfill
+	
+	\caption{\label{fig:multiparameters3} Полки STD 1}
+\end{figure}
+
+\newpage
+
+
+\pagestyle{empty}
+
+%адаптивность
+\begin{figure}[hp]
+	\linespread{1.4}
+	\captionsetup[subfigure]{labelformat=empty}
+	
+	\subcaptionbox{\label{fig:multi_ampl3} Второе звено}
+	{\subref{fig:multi_ampl3}\linebreak\includegraphics[width=0.48\textwidth]{identificated/sr_100_online_tau_2}}	
+	\subcaptionbox{\label{fig:multi_sigma3} Третье звено}%
+	{\subref{fig:multi_sigma3}\linebreak\includegraphics[width=0.48\textwidth]{identificated/sr_100_online_tau_3}}	\\ \vspace{3mm}
+	
+	\subcaptionbox{\label{fig:multi_phi3} Четвёртое звено}
+	{\subref{fig:multi_phi3}\linebreak\includegraphics[width=0.48\textwidth]{identificated/sr_100_online_tau_4}}
+	\subcaptionbox{\label{fig:multi_xi3} Пятое звено}%
+	{\subref{fig:multi_xi3}\linebreak\includegraphics[width=0.48\textwidth]{identificated/sr_100_online_tau_5}}	\\ \vspace{3mm}
+	
+	\caption{\label{fig:multiparameters3} Оценка моментов STD 1}
+\end{figure}
+
+
+\newpage
+
+
+\pagestyle{empty}
+
+%адаптивность
+\begin{figure}[hp]
+	\linespread{1.4}
+	\captionsetup[subfigure]{labelformat=empty}
+	
+	\subcaptionbox{\label{fig:multi_ampl3} Второе звено}
+	{\subref{fig:multi_ampl3}\linebreak\includegraphics[width=0.48\textwidth]{identificated/sr_100_trapezidal_tau_2}}	
+	\subcaptionbox{\label{fig:multi_sigma3} Третье звено}%
+	{\subref{fig:multi_sigma3}\linebreak\includegraphics[width=0.48\textwidth]{identificated/sr_100_trapezidal_tau_3}}	\\ \vspace{3mm}
+	
+	\subcaptionbox{\label{fig:multi_phi3} Четвёртое звено}
+	{\subref{fig:multi_phi3}\linebreak\includegraphics[width=0.48\textwidth]{identificated/sr_100_trapezidal_tau_4}}
+	\subcaptionbox{\label{fig:multi_xi3} Пятое звено}%
+	{\subref{fig:multi_xi3}\linebreak\includegraphics[width=0.48\textwidth]{identificated/sr_100_trapezidal_tau_5}}	\\ \vspace{3mm}
+	
+	\caption{\label{fig:multiparameters3} Оценка моментов с постоянными коэффициентами трения STD 1}
+\end{figure}
+
+
+
+
+\end{document}

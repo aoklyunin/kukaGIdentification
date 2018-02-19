@@ -1,0 +1,1 @@
+\begin{equation}\theta=\begin{bmatrix} 1.884\\ -3.281\\ 0.155\\ 0.027\\ 0.963\\ 2.271\\ -0.189\\ 0.117\\\end{bmatrix}\end{equation}\begin{equation}\theta=\begin{bmatrix} 1.461\\ -2.749\\ 0.189\\ 0.021\\ 0.774\\ 1.410\\ -0.157\\ 0.057\\ 0.511\\ 0.242\\ 0.321\\ 0.317\\\end{bmatrix}\end{equation}
