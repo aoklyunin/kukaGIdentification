@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.10)  19 FEB 2018 17:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.10)  20 FEB 2018 17:46
 entering extended mode
 **./kuka_identification.tex
 (kuka_identification.tex
@@ -777,516 +777,516 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 {C:/Users/aokly/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3] [4]
  [5] [6]
-<../imgs/calculated/meanT_sr_0_1.jpg, id=33, 1204.5pt x 903.375pt>
+<../imgs/calculated/meanT_sr_0_1.jpg, id=30, 1204.5pt x 903.375pt>
 File: ../imgs/calculated/meanT_sr_0_1.jpg Graphic file (type jpg)
 
 <use ../imgs/calculated/meanT_sr_0_1.jpg>
 Package pdftex.def Info: ../imgs/calculated/meanT_sr_0_1.jpg used on input line
- 117.
+ 112.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/calculated/meanT_sr_0_2.jpg, id=34, 1204.5pt x 903.375pt>
+<../imgs/calculated/meanT_sr_0_2.jpg, id=31, 1204.5pt x 903.375pt>
 File: ../imgs/calculated/meanT_sr_0_2.jpg Graphic file (type jpg)
 
 <use ../imgs/calculated/meanT_sr_0_2.jpg>
 Package pdftex.def Info: ../imgs/calculated/meanT_sr_0_2.jpg used on input line
- 120.
+ 115.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/calculated/meanT_sr_0_3.jpg, id=35, 1204.5pt x 903.375pt>
+<../imgs/calculated/meanT_sr_0_3.jpg, id=32, 1204.5pt x 903.375pt>
 File: ../imgs/calculated/meanT_sr_0_3.jpg Graphic file (type jpg)
 
 <use ../imgs/calculated/meanT_sr_0_3.jpg>
 Package pdftex.def Info: ../imgs/calculated/meanT_sr_0_3.jpg used on input line
- 124.
+ 119.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/calculated/meanT_sr_0_4.jpg, id=36, 1204.5pt x 903.375pt>
+<../imgs/calculated/meanT_sr_0_4.jpg, id=33, 1204.5pt x 903.375pt>
 File: ../imgs/calculated/meanT_sr_0_4.jpg Graphic file (type jpg)
 
 <use ../imgs/calculated/meanT_sr_0_4.jpg>
 Package pdftex.def Info: ../imgs/calculated/meanT_sr_0_4.jpg used on input line
- 127.
+ 122.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/calculated/meanT_sr_0_5.jpg, id=37, 1204.5pt x 903.375pt>
+<../imgs/calculated/meanT_sr_0_5.jpg, id=34, 1204.5pt x 903.375pt>
 File: ../imgs/calculated/meanT_sr_0_5.jpg Graphic file (type jpg)
 
 <use ../imgs/calculated/meanT_sr_0_5.jpg>
 Package pdftex.def Info: ../imgs/calculated/meanT_sr_0_5.jpg used on input line
- 131.
+ 126.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/identificated/sr_0_online_tau_2.jpg, id=38, 1204.5pt x 903.375pt>
+<../imgs/identificated/sr_0_online_tau_2.jpg, id=35, 1204.5pt x 903.375pt>
 File: ../imgs/identificated/sr_0_online_tau_2.jpg Graphic file (type jpg)
 
 <use ../imgs/identificated/sr_0_online_tau_2.jpg>
 Package pdftex.def Info: ../imgs/identificated/sr_0_online_tau_2.jpg used on in
-put line 148.
+put line 143.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/identificated/sr_0_online_tau_3.jpg, id=39, 1204.5pt x 903.375pt>
+<../imgs/identificated/sr_0_online_tau_3.jpg, id=36, 1204.5pt x 903.375pt>
 File: ../imgs/identificated/sr_0_online_tau_3.jpg Graphic file (type jpg)
 
 <use ../imgs/identificated/sr_0_online_tau_3.jpg>
 Package pdftex.def Info: ../imgs/identificated/sr_0_online_tau_3.jpg used on in
-put line 150.
+put line 145.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/identificated/sr_0_online_tau_4.jpg, id=40, 1204.5pt x 903.375pt>
+<../imgs/identificated/sr_0_online_tau_4.jpg, id=37, 1204.5pt x 903.375pt>
 File: ../imgs/identificated/sr_0_online_tau_4.jpg Graphic file (type jpg)
 
 <use ../imgs/identificated/sr_0_online_tau_4.jpg>
 Package pdftex.def Info: ../imgs/identificated/sr_0_online_tau_4.jpg used on in
-put line 153.
+put line 148.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/identificated/sr_0_online_tau_5.jpg, id=41, 1204.5pt x 903.375pt>
+<../imgs/identificated/sr_0_online_tau_5.jpg, id=38, 1204.5pt x 903.375pt>
 File: ../imgs/identificated/sr_0_online_tau_5.jpg Graphic file (type jpg)
 
 <use ../imgs/identificated/sr_0_online_tau_5.jpg>
 Package pdftex.def Info: ../imgs/identificated/sr_0_online_tau_5.jpg used on in
-put line 155.
+put line 150.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/identificated/sr_0_trapezidal_tau_2.jpg, id=42, 1204.5pt x 903.375pt>
+<../imgs/identificated/sr_0_trapezidal_tau_2.jpg, id=39, 1204.5pt x 903.375pt>
 File: ../imgs/identificated/sr_0_trapezidal_tau_2.jpg Graphic file (type jpg)
 
 <use ../imgs/identificated/sr_0_trapezidal_tau_2.jpg>
 Package pdftex.def Info: ../imgs/identificated/sr_0_trapezidal_tau_2.jpg used o
-n input line 171.
+n input line 166.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/identificated/sr_0_trapezidal_tau_3.jpg, id=43, 1204.5pt x 903.375pt>
+<../imgs/identificated/sr_0_trapezidal_tau_3.jpg, id=40, 1204.5pt x 903.375pt>
 File: ../imgs/identificated/sr_0_trapezidal_tau_3.jpg Graphic file (type jpg)
 
 <use ../imgs/identificated/sr_0_trapezidal_tau_3.jpg>
 Package pdftex.def Info: ../imgs/identificated/sr_0_trapezidal_tau_3.jpg used o
-n input line 173.
+n input line 168.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/identificated/sr_0_trapezidal_tau_4.jpg, id=44, 1204.5pt x 903.375pt>
+<../imgs/identificated/sr_0_trapezidal_tau_4.jpg, id=41, 1204.5pt x 903.375pt>
 File: ../imgs/identificated/sr_0_trapezidal_tau_4.jpg Graphic file (type jpg)
 
 <use ../imgs/identificated/sr_0_trapezidal_tau_4.jpg>
 Package pdftex.def Info: ../imgs/identificated/sr_0_trapezidal_tau_4.jpg used o
-n input line 176.
+n input line 171.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/identificated/sr_0_trapezidal_tau_5.jpg, id=45, 1204.5pt x 903.375pt>
+<../imgs/identificated/sr_0_trapezidal_tau_5.jpg, id=42, 1204.5pt x 903.375pt>
 File: ../imgs/identificated/sr_0_trapezidal_tau_5.jpg Graphic file (type jpg)
 
 <use ../imgs/identificated/sr_0_trapezidal_tau_5.jpg>
 Package pdftex.def Info: ../imgs/identificated/sr_0_trapezidal_tau_5.jpg used o
-n input line 178.
+n input line 173.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/calculated/meanT_sr_10_1.jpg, id=46, 1204.5pt x 903.375pt>
+<../imgs/calculated/meanT_sr_10_1.jpg, id=43, 1204.5pt x 903.375pt>
 File: ../imgs/calculated/meanT_sr_10_1.jpg Graphic file (type jpg)
 
 <use ../imgs/calculated/meanT_sr_10_1.jpg>
 Package pdftex.def Info: ../imgs/calculated/meanT_sr_10_1.jpg used on input lin
-e 198.
+e 193.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/calculated/meanT_sr_10_2.jpg, id=47, 1204.5pt x 903.375pt>
+<../imgs/calculated/meanT_sr_10_2.jpg, id=44, 1204.5pt x 903.375pt>
 File: ../imgs/calculated/meanT_sr_10_2.jpg Graphic file (type jpg)
 
 <use ../imgs/calculated/meanT_sr_10_2.jpg>
 Package pdftex.def Info: ../imgs/calculated/meanT_sr_10_2.jpg used on input lin
-e 201.
+e 196.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/calculated/meanT_sr_10_3.jpg, id=48, 1204.5pt x 903.375pt>
+<../imgs/calculated/meanT_sr_10_3.jpg, id=45, 1204.5pt x 903.375pt>
 File: ../imgs/calculated/meanT_sr_10_3.jpg Graphic file (type jpg)
 
 <use ../imgs/calculated/meanT_sr_10_3.jpg>
 Package pdftex.def Info: ../imgs/calculated/meanT_sr_10_3.jpg used on input lin
-e 205.
+e 200.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/calculated/meanT_sr_10_4.jpg, id=49, 1204.5pt x 903.375pt>
+<../imgs/calculated/meanT_sr_10_4.jpg, id=46, 1204.5pt x 903.375pt>
 File: ../imgs/calculated/meanT_sr_10_4.jpg Graphic file (type jpg)
 
 <use ../imgs/calculated/meanT_sr_10_4.jpg>
 Package pdftex.def Info: ../imgs/calculated/meanT_sr_10_4.jpg used on input lin
-e 208.
+e 203.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/calculated/meanT_sr_10_5.jpg, id=50, 1204.5pt x 903.375pt>
+<../imgs/calculated/meanT_sr_10_5.jpg, id=47, 1204.5pt x 903.375pt>
 File: ../imgs/calculated/meanT_sr_10_5.jpg Graphic file (type jpg)
 
 <use ../imgs/calculated/meanT_sr_10_5.jpg>
 Package pdftex.def Info: ../imgs/calculated/meanT_sr_10_5.jpg used on input lin
-e 212.
+e 207.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/identificated/sr_10_online_tau_2.jpg, id=51, 1204.5pt x 903.375pt>
+<../imgs/identificated/sr_10_online_tau_2.jpg, id=48, 1204.5pt x 903.375pt>
 File: ../imgs/identificated/sr_10_online_tau_2.jpg Graphic file (type jpg)
 
 <use ../imgs/identificated/sr_10_online_tau_2.jpg>
 Package pdftex.def Info: ../imgs/identificated/sr_10_online_tau_2.jpg used on i
-nput line 229.
+nput line 224.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/identificated/sr_10_online_tau_3.jpg, id=52, 1204.5pt x 903.375pt>
+<../imgs/identificated/sr_10_online_tau_3.jpg, id=49, 1204.5pt x 903.375pt>
 File: ../imgs/identificated/sr_10_online_tau_3.jpg Graphic file (type jpg)
 
 <use ../imgs/identificated/sr_10_online_tau_3.jpg>
 Package pdftex.def Info: ../imgs/identificated/sr_10_online_tau_3.jpg used on i
-nput line 231.
+nput line 226.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/identificated/sr_10_online_tau_4.jpg, id=53, 1204.5pt x 903.375pt>
+<../imgs/identificated/sr_10_online_tau_4.jpg, id=50, 1204.5pt x 903.375pt>
 File: ../imgs/identificated/sr_10_online_tau_4.jpg Graphic file (type jpg)
 
 <use ../imgs/identificated/sr_10_online_tau_4.jpg>
 Package pdftex.def Info: ../imgs/identificated/sr_10_online_tau_4.jpg used on i
-nput line 234.
+nput line 229.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/identificated/sr_10_online_tau_5.jpg, id=54, 1204.5pt x 903.375pt>
+<../imgs/identificated/sr_10_online_tau_5.jpg, id=51, 1204.5pt x 903.375pt>
 File: ../imgs/identificated/sr_10_online_tau_5.jpg Graphic file (type jpg)
 
 <use ../imgs/identificated/sr_10_online_tau_5.jpg>
 Package pdftex.def Info: ../imgs/identificated/sr_10_online_tau_5.jpg used on i
-nput line 236.
+nput line 231.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/identificated/sr_10_trapezidal_tau_2.jpg, id=55, 1204.5pt x 903.375pt>
+<../imgs/identificated/sr_10_trapezidal_tau_2.jpg, id=52, 1204.5pt x 903.375pt>
 File: ../imgs/identificated/sr_10_trapezidal_tau_2.jpg Graphic file (type jpg)
 <use ../imgs/identificated/sr_10_trapezidal_tau_2.jpg>
 Package pdftex.def Info: ../imgs/identificated/sr_10_trapezidal_tau_2.jpg used 
-on input line 253.
+on input line 248.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/identificated/sr_10_trapezidal_tau_3.jpg, id=56, 1204.5pt x 903.375pt>
+<../imgs/identificated/sr_10_trapezidal_tau_3.jpg, id=53, 1204.5pt x 903.375pt>
 File: ../imgs/identificated/sr_10_trapezidal_tau_3.jpg Graphic file (type jpg)
 <use ../imgs/identificated/sr_10_trapezidal_tau_3.jpg>
 Package pdftex.def Info: ../imgs/identificated/sr_10_trapezidal_tau_3.jpg used 
-on input line 255.
+on input line 250.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/identificated/sr_10_trapezidal_tau_4.jpg, id=57, 1204.5pt x 903.375pt>
+<../imgs/identificated/sr_10_trapezidal_tau_4.jpg, id=54, 1204.5pt x 903.375pt>
 File: ../imgs/identificated/sr_10_trapezidal_tau_4.jpg Graphic file (type jpg)
 <use ../imgs/identificated/sr_10_trapezidal_tau_4.jpg>
 Package pdftex.def Info: ../imgs/identificated/sr_10_trapezidal_tau_4.jpg used 
-on input line 258.
+on input line 253.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/identificated/sr_10_trapezidal_tau_5.jpg, id=58, 1204.5pt x 903.375pt>
+<../imgs/identificated/sr_10_trapezidal_tau_5.jpg, id=55, 1204.5pt x 903.375pt>
 File: ../imgs/identificated/sr_10_trapezidal_tau_5.jpg Graphic file (type jpg)
 <use ../imgs/identificated/sr_10_trapezidal_tau_5.jpg>
 Package pdftex.def Info: ../imgs/identificated/sr_10_trapezidal_tau_5.jpg used 
-on input line 260.
+on input line 255.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/calculated/meanT_sr_30_1.jpg, id=59, 1204.5pt x 903.375pt>
+<../imgs/calculated/meanT_sr_30_1.jpg, id=56, 1204.5pt x 903.375pt>
 File: ../imgs/calculated/meanT_sr_30_1.jpg Graphic file (type jpg)
 
 <use ../imgs/calculated/meanT_sr_30_1.jpg>
 Package pdftex.def Info: ../imgs/calculated/meanT_sr_30_1.jpg used on input lin
-e 276.
+e 271.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/calculated/meanT_sr_30_2.jpg, id=60, 1204.5pt x 903.375pt>
+<../imgs/calculated/meanT_sr_30_2.jpg, id=57, 1204.5pt x 903.375pt>
 File: ../imgs/calculated/meanT_sr_30_2.jpg Graphic file (type jpg)
 
 <use ../imgs/calculated/meanT_sr_30_2.jpg>
 Package pdftex.def Info: ../imgs/calculated/meanT_sr_30_2.jpg used on input lin
-e 279.
+e 274.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/calculated/meanT_sr_30_3.jpg, id=61, 1204.5pt x 903.375pt>
+<../imgs/calculated/meanT_sr_30_3.jpg, id=58, 1204.5pt x 903.375pt>
 File: ../imgs/calculated/meanT_sr_30_3.jpg Graphic file (type jpg)
 
 <use ../imgs/calculated/meanT_sr_30_3.jpg>
 Package pdftex.def Info: ../imgs/calculated/meanT_sr_30_3.jpg used on input lin
-e 283.
+e 278.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/calculated/meanT_sr_30_4.jpg, id=62, 1204.5pt x 903.375pt>
+<../imgs/calculated/meanT_sr_30_4.jpg, id=59, 1204.5pt x 903.375pt>
 File: ../imgs/calculated/meanT_sr_30_4.jpg Graphic file (type jpg)
 
 <use ../imgs/calculated/meanT_sr_30_4.jpg>
 Package pdftex.def Info: ../imgs/calculated/meanT_sr_30_4.jpg used on input lin
-e 286.
+e 281.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/calculated/meanT_sr_30_5.jpg, id=63, 1204.5pt x 903.375pt>
+<../imgs/calculated/meanT_sr_30_5.jpg, id=60, 1204.5pt x 903.375pt>
 File: ../imgs/calculated/meanT_sr_30_5.jpg Graphic file (type jpg)
 
 <use ../imgs/calculated/meanT_sr_30_5.jpg>
 Package pdftex.def Info: ../imgs/calculated/meanT_sr_30_5.jpg used on input lin
-e 290.
+e 285.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/identificated/sr_30_online_tau_2.jpg, id=64, 1204.5pt x 903.375pt>
+<../imgs/identificated/sr_30_online_tau_2.jpg, id=61, 1204.5pt x 903.375pt>
 File: ../imgs/identificated/sr_30_online_tau_2.jpg Graphic file (type jpg)
 
 <use ../imgs/identificated/sr_30_online_tau_2.jpg>
 Package pdftex.def Info: ../imgs/identificated/sr_30_online_tau_2.jpg used on i
-nput line 307.
+nput line 302.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/identificated/sr_30_online_tau_3.jpg, id=65, 1204.5pt x 903.375pt>
+<../imgs/identificated/sr_30_online_tau_3.jpg, id=62, 1204.5pt x 903.375pt>
 File: ../imgs/identificated/sr_30_online_tau_3.jpg Graphic file (type jpg)
 
 <use ../imgs/identificated/sr_30_online_tau_3.jpg>
 Package pdftex.def Info: ../imgs/identificated/sr_30_online_tau_3.jpg used on i
-nput line 309.
+nput line 304.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/identificated/sr_30_online_tau_4.jpg, id=66, 1204.5pt x 903.375pt>
+<../imgs/identificated/sr_30_online_tau_4.jpg, id=63, 1204.5pt x 903.375pt>
 File: ../imgs/identificated/sr_30_online_tau_4.jpg Graphic file (type jpg)
 
 <use ../imgs/identificated/sr_30_online_tau_4.jpg>
 Package pdftex.def Info: ../imgs/identificated/sr_30_online_tau_4.jpg used on i
-nput line 312.
+nput line 307.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/identificated/sr_30_online_tau_5.jpg, id=67, 1204.5pt x 903.375pt>
+<../imgs/identificated/sr_30_online_tau_5.jpg, id=64, 1204.5pt x 903.375pt>
 File: ../imgs/identificated/sr_30_online_tau_5.jpg Graphic file (type jpg)
 
 <use ../imgs/identificated/sr_30_online_tau_5.jpg>
 Package pdftex.def Info: ../imgs/identificated/sr_30_online_tau_5.jpg used on i
-nput line 314.
+nput line 309.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/identificated/sr_30_trapezidal_tau_2.jpg, id=68, 1204.5pt x 903.375pt>
+<../imgs/identificated/sr_30_trapezidal_tau_2.jpg, id=65, 1204.5pt x 903.375pt>
 File: ../imgs/identificated/sr_30_trapezidal_tau_2.jpg Graphic file (type jpg)
 <use ../imgs/identificated/sr_30_trapezidal_tau_2.jpg>
 Package pdftex.def Info: ../imgs/identificated/sr_30_trapezidal_tau_2.jpg used 
-on input line 331.
+on input line 326.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/identificated/sr_30_trapezidal_tau_3.jpg, id=69, 1204.5pt x 903.375pt>
+<../imgs/identificated/sr_30_trapezidal_tau_3.jpg, id=66, 1204.5pt x 903.375pt>
 File: ../imgs/identificated/sr_30_trapezidal_tau_3.jpg Graphic file (type jpg)
 <use ../imgs/identificated/sr_30_trapezidal_tau_3.jpg>
 Package pdftex.def Info: ../imgs/identificated/sr_30_trapezidal_tau_3.jpg used 
-on input line 333.
+on input line 328.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/identificated/sr_30_trapezidal_tau_4.jpg, id=70, 1204.5pt x 903.375pt>
+<../imgs/identificated/sr_30_trapezidal_tau_4.jpg, id=67, 1204.5pt x 903.375pt>
 File: ../imgs/identificated/sr_30_trapezidal_tau_4.jpg Graphic file (type jpg)
 <use ../imgs/identificated/sr_30_trapezidal_tau_4.jpg>
 Package pdftex.def Info: ../imgs/identificated/sr_30_trapezidal_tau_4.jpg used 
-on input line 336.
+on input line 331.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/identificated/sr_30_trapezidal_tau_5.jpg, id=71, 1204.5pt x 903.375pt>
+<../imgs/identificated/sr_30_trapezidal_tau_5.jpg, id=68, 1204.5pt x 903.375pt>
 File: ../imgs/identificated/sr_30_trapezidal_tau_5.jpg Graphic file (type jpg)
 <use ../imgs/identificated/sr_30_trapezidal_tau_5.jpg>
 Package pdftex.def Info: ../imgs/identificated/sr_30_trapezidal_tau_5.jpg used 
-on input line 338.
+on input line 333.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/calculated/meanT_sr_50_1.jpg, id=72, 1204.5pt x 903.375pt>
+<../imgs/calculated/meanT_sr_50_1.jpg, id=69, 1204.5pt x 903.375pt>
 File: ../imgs/calculated/meanT_sr_50_1.jpg Graphic file (type jpg)
 
 <use ../imgs/calculated/meanT_sr_50_1.jpg>
 Package pdftex.def Info: ../imgs/calculated/meanT_sr_50_1.jpg used on input lin
-e 356.
+e 351.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/calculated/meanT_sr_50_2.jpg, id=73, 1204.5pt x 903.375pt>
+<../imgs/calculated/meanT_sr_50_2.jpg, id=70, 1204.5pt x 903.375pt>
 File: ../imgs/calculated/meanT_sr_50_2.jpg Graphic file (type jpg)
 
 <use ../imgs/calculated/meanT_sr_50_2.jpg>
 Package pdftex.def Info: ../imgs/calculated/meanT_sr_50_2.jpg used on input lin
-e 359.
+e 354.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/calculated/meanT_sr_50_3.jpg, id=74, 1204.5pt x 903.375pt>
+<../imgs/calculated/meanT_sr_50_3.jpg, id=71, 1204.5pt x 903.375pt>
 File: ../imgs/calculated/meanT_sr_50_3.jpg Graphic file (type jpg)
 
 <use ../imgs/calculated/meanT_sr_50_3.jpg>
 Package pdftex.def Info: ../imgs/calculated/meanT_sr_50_3.jpg used on input lin
-e 363.
+e 358.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/calculated/meanT_sr_50_4.jpg, id=75, 1204.5pt x 903.375pt>
+<../imgs/calculated/meanT_sr_50_4.jpg, id=72, 1204.5pt x 903.375pt>
 File: ../imgs/calculated/meanT_sr_50_4.jpg Graphic file (type jpg)
 
 <use ../imgs/calculated/meanT_sr_50_4.jpg>
 Package pdftex.def Info: ../imgs/calculated/meanT_sr_50_4.jpg used on input lin
-e 366.
+e 361.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/calculated/meanT_sr_50_5.jpg, id=76, 1204.5pt x 903.375pt>
+<../imgs/calculated/meanT_sr_50_5.jpg, id=73, 1204.5pt x 903.375pt>
 File: ../imgs/calculated/meanT_sr_50_5.jpg Graphic file (type jpg)
 
 <use ../imgs/calculated/meanT_sr_50_5.jpg>
 Package pdftex.def Info: ../imgs/calculated/meanT_sr_50_5.jpg used on input lin
-e 370.
+e 365.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/identificated/sr_50_online_tau_2.jpg, id=77, 1204.5pt x 903.375pt>
+<../imgs/identificated/sr_50_online_tau_2.jpg, id=74, 1204.5pt x 903.375pt>
 File: ../imgs/identificated/sr_50_online_tau_2.jpg Graphic file (type jpg)
 
 <use ../imgs/identificated/sr_50_online_tau_2.jpg>
 Package pdftex.def Info: ../imgs/identificated/sr_50_online_tau_2.jpg used on i
-nput line 387.
+nput line 382.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/identificated/sr_50_online_tau_3.jpg, id=78, 1204.5pt x 903.375pt>
+<../imgs/identificated/sr_50_online_tau_3.jpg, id=75, 1204.5pt x 903.375pt>
 File: ../imgs/identificated/sr_50_online_tau_3.jpg Graphic file (type jpg)
 
 <use ../imgs/identificated/sr_50_online_tau_3.jpg>
 Package pdftex.def Info: ../imgs/identificated/sr_50_online_tau_3.jpg used on i
-nput line 389.
+nput line 384.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/identificated/sr_50_online_tau_4.jpg, id=79, 1204.5pt x 903.375pt>
+<../imgs/identificated/sr_50_online_tau_4.jpg, id=76, 1204.5pt x 903.375pt>
 File: ../imgs/identificated/sr_50_online_tau_4.jpg Graphic file (type jpg)
 
 <use ../imgs/identificated/sr_50_online_tau_4.jpg>
 Package pdftex.def Info: ../imgs/identificated/sr_50_online_tau_4.jpg used on i
-nput line 392.
+nput line 387.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/identificated/sr_50_online_tau_5.jpg, id=80, 1204.5pt x 903.375pt>
+<../imgs/identificated/sr_50_online_tau_5.jpg, id=77, 1204.5pt x 903.375pt>
 File: ../imgs/identificated/sr_50_online_tau_5.jpg Graphic file (type jpg)
 
 <use ../imgs/identificated/sr_50_online_tau_5.jpg>
 Package pdftex.def Info: ../imgs/identificated/sr_50_online_tau_5.jpg used on i
-nput line 394.
+nput line 389.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/identificated/sr_50_trapezidal_tau_2.jpg, id=81, 1204.5pt x 903.375pt>
+<../imgs/identificated/sr_50_trapezidal_tau_2.jpg, id=78, 1204.5pt x 903.375pt>
 File: ../imgs/identificated/sr_50_trapezidal_tau_2.jpg Graphic file (type jpg)
 <use ../imgs/identificated/sr_50_trapezidal_tau_2.jpg>
 Package pdftex.def Info: ../imgs/identificated/sr_50_trapezidal_tau_2.jpg used 
-on input line 411.
+on input line 406.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/identificated/sr_50_trapezidal_tau_3.jpg, id=82, 1204.5pt x 903.375pt>
+<../imgs/identificated/sr_50_trapezidal_tau_3.jpg, id=79, 1204.5pt x 903.375pt>
 File: ../imgs/identificated/sr_50_trapezidal_tau_3.jpg Graphic file (type jpg)
 <use ../imgs/identificated/sr_50_trapezidal_tau_3.jpg>
 Package pdftex.def Info: ../imgs/identificated/sr_50_trapezidal_tau_3.jpg used 
-on input line 413.
+on input line 408.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/identificated/sr_50_trapezidal_tau_4.jpg, id=83, 1204.5pt x 903.375pt>
+<../imgs/identificated/sr_50_trapezidal_tau_4.jpg, id=80, 1204.5pt x 903.375pt>
 File: ../imgs/identificated/sr_50_trapezidal_tau_4.jpg Graphic file (type jpg)
 <use ../imgs/identificated/sr_50_trapezidal_tau_4.jpg>
 Package pdftex.def Info: ../imgs/identificated/sr_50_trapezidal_tau_4.jpg used 
-on input line 416.
+on input line 411.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/identificated/sr_50_trapezidal_tau_5.jpg, id=84, 1204.5pt x 903.375pt>
+<../imgs/identificated/sr_50_trapezidal_tau_5.jpg, id=81, 1204.5pt x 903.375pt>
 File: ../imgs/identificated/sr_50_trapezidal_tau_5.jpg Graphic file (type jpg)
 <use ../imgs/identificated/sr_50_trapezidal_tau_5.jpg>
 Package pdftex.def Info: ../imgs/identificated/sr_50_trapezidal_tau_5.jpg used 
-on input line 418.
+on input line 413.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/calculated/meanT_sr_100_1.jpg, id=85, 1204.5pt x 903.375pt>
+<../imgs/calculated/meanT_sr_100_1.jpg, id=82, 1204.5pt x 903.375pt>
 File: ../imgs/calculated/meanT_sr_100_1.jpg Graphic file (type jpg)
 
 <use ../imgs/calculated/meanT_sr_100_1.jpg>
 Package pdftex.def Info: ../imgs/calculated/meanT_sr_100_1.jpg used on input li
-ne 437.
+ne 432.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/calculated/meanT_sr_100_2.jpg, id=86, 1204.5pt x 903.375pt>
+<../imgs/calculated/meanT_sr_100_2.jpg, id=83, 1204.5pt x 903.375pt>
 File: ../imgs/calculated/meanT_sr_100_2.jpg Graphic file (type jpg)
 
 <use ../imgs/calculated/meanT_sr_100_2.jpg>
 Package pdftex.def Info: ../imgs/calculated/meanT_sr_100_2.jpg used on input li
-ne 440.
+ne 435.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/calculated/meanT_sr_100_3.jpg, id=87, 1204.5pt x 903.375pt>
+<../imgs/calculated/meanT_sr_100_3.jpg, id=84, 1204.5pt x 903.375pt>
 File: ../imgs/calculated/meanT_sr_100_3.jpg Graphic file (type jpg)
 
 <use ../imgs/calculated/meanT_sr_100_3.jpg>
 Package pdftex.def Info: ../imgs/calculated/meanT_sr_100_3.jpg used on input li
-ne 444.
+ne 439.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/calculated/meanT_sr_100_4.jpg, id=88, 1204.5pt x 903.375pt>
+<../imgs/calculated/meanT_sr_100_4.jpg, id=85, 1204.5pt x 903.375pt>
 File: ../imgs/calculated/meanT_sr_100_4.jpg Graphic file (type jpg)
 
 <use ../imgs/calculated/meanT_sr_100_4.jpg>
 Package pdftex.def Info: ../imgs/calculated/meanT_sr_100_4.jpg used on input li
-ne 447.
+ne 442.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/calculated/meanT_sr_100_5.jpg, id=89, 1204.5pt x 903.375pt>
+<../imgs/calculated/meanT_sr_100_5.jpg, id=86, 1204.5pt x 903.375pt>
 File: ../imgs/calculated/meanT_sr_100_5.jpg Graphic file (type jpg)
 
 <use ../imgs/calculated/meanT_sr_100_5.jpg>
 Package pdftex.def Info: ../imgs/calculated/meanT_sr_100_5.jpg used on input li
-ne 451.
+ne 446.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/identificated/sr_100_online_tau_2.jpg, id=90, 1204.5pt x 903.375pt>
+<../imgs/identificated/sr_100_online_tau_2.jpg, id=87, 1204.5pt x 903.375pt>
 File: ../imgs/identificated/sr_100_online_tau_2.jpg Graphic file (type jpg)
 
 <use ../imgs/identificated/sr_100_online_tau_2.jpg>
 Package pdftex.def Info: ../imgs/identificated/sr_100_online_tau_2.jpg used on 
-input line 468.
+input line 463.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/identificated/sr_100_online_tau_3.jpg, id=91, 1204.5pt x 903.375pt>
+<../imgs/identificated/sr_100_online_tau_3.jpg, id=88, 1204.5pt x 903.375pt>
 File: ../imgs/identificated/sr_100_online_tau_3.jpg Graphic file (type jpg)
 
 <use ../imgs/identificated/sr_100_online_tau_3.jpg>
 Package pdftex.def Info: ../imgs/identificated/sr_100_online_tau_3.jpg used on 
-input line 470.
+input line 465.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/identificated/sr_100_online_tau_4.jpg, id=92, 1204.5pt x 903.375pt>
+<../imgs/identificated/sr_100_online_tau_4.jpg, id=89, 1204.5pt x 903.375pt>
 File: ../imgs/identificated/sr_100_online_tau_4.jpg Graphic file (type jpg)
 
 <use ../imgs/identificated/sr_100_online_tau_4.jpg>
 Package pdftex.def Info: ../imgs/identificated/sr_100_online_tau_4.jpg used on 
-input line 473.
+input line 468.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/identificated/sr_100_online_tau_5.jpg, id=93, 1204.5pt x 903.375pt>
+<../imgs/identificated/sr_100_online_tau_5.jpg, id=90, 1204.5pt x 903.375pt>
 File: ../imgs/identificated/sr_100_online_tau_5.jpg Graphic file (type jpg)
 
 <use ../imgs/identificated/sr_100_online_tau_5.jpg>
 Package pdftex.def Info: ../imgs/identificated/sr_100_online_tau_5.jpg used on 
-input line 475.
+input line 470.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/identificated/sr_100_trapezidal_tau_2.jpg, id=94, 1204.5pt x 903.375pt
+<../imgs/identificated/sr_100_trapezidal_tau_2.jpg, id=91, 1204.5pt x 903.375pt
 >
 File: ../imgs/identificated/sr_100_trapezidal_tau_2.jpg Graphic file (type jpg)
 
  <use ../imgs/identificated/sr_100_trapezidal_tau_2.jpg>
 Package pdftex.def Info: ../imgs/identificated/sr_100_trapezidal_tau_2.jpg used
- on input line 492.
+ on input line 487.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/identificated/sr_100_trapezidal_tau_3.jpg, id=95, 1204.5pt x 903.375pt
+<../imgs/identificated/sr_100_trapezidal_tau_3.jpg, id=92, 1204.5pt x 903.375pt
 >
 File: ../imgs/identificated/sr_100_trapezidal_tau_3.jpg Graphic file (type jpg)
 
  <use ../imgs/identificated/sr_100_trapezidal_tau_3.jpg>
 Package pdftex.def Info: ../imgs/identificated/sr_100_trapezidal_tau_3.jpg used
- on input line 494.
+ on input line 489.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/identificated/sr_100_trapezidal_tau_4.jpg, id=96, 1204.5pt x 903.375pt
+<../imgs/identificated/sr_100_trapezidal_tau_4.jpg, id=93, 1204.5pt x 903.375pt
 >
 File: ../imgs/identificated/sr_100_trapezidal_tau_4.jpg Graphic file (type jpg)
 
  <use ../imgs/identificated/sr_100_trapezidal_tau_4.jpg>
 Package pdftex.def Info: ../imgs/identificated/sr_100_trapezidal_tau_4.jpg used
- on input line 497.
+ on input line 492.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 
-<../imgs/identificated/sr_100_trapezidal_tau_5.jpg, id=97, 1204.5pt x 903.375pt
+<../imgs/identificated/sr_100_trapezidal_tau_5.jpg, id=94, 1204.5pt x 903.375pt
 >
 File: ../imgs/identificated/sr_100_trapezidal_tau_5.jpg Graphic file (type jpg)
 
  <use ../imgs/identificated/sr_100_trapezidal_tau_5.jpg>
 Package pdftex.def Info: ../imgs/identificated/sr_100_trapezidal_tau_5.jpg used
- on input line 499.
+ on input line 494.
 (pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
  [7 <../imgs/calculated/meanT_sr_0_1.jpg> <../imgs/calculated/meanT_sr_0_2.jpg>
  <../imgs/calculated/meanT_sr_0_3.jpg> <../imgs/calculated/meanT_sr_0_4.jpg> <.
@@ -1348,14 +1348,12 @@ four\lh\lh-t2a\dpi600\larm1000.pk> <C:\Users\aokly\AppData\Local\MiKTeX\2.9\fon
 ts\pk\ljfour\lh\lh-t2a\dpi600\labx1440.pk> <C:\Users\aokly\AppData\Local\MiKTeX
 \2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\labx1200.pk><C:/Program Files/MiKTeX 2.9/
 fonts/type1/public/amsfonts/cm/cmbsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><
-C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on kuka_identification.pdf (21 pages, 8011757 bytes).
+ype1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmr8.pfb>
+Output written on kuka_identification.pdf (21 pages, 7703682 bytes).
 PDF statistics:
- 358 PDF objects out of 1000 (max. 8388607)
+ 361 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  326 words of extra memory for PDF output out of 10000 (max. 10000000)
 

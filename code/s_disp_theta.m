@@ -1,27 +1,24 @@
 load('../workspace/Conf.mat');
 load('../workspace/hatTheta.mat');
-
+F = [F1;F2;F3;F4;F5];
 f = fopen(sprintf('..//results//sr_%d_theta.txt',stdRange*100),'w');
 
-fprintf(f,'\\begin{equation}\\theta=\\begin{bmatrix}');
-for i=1:1:size(theta)
-        s = ' ';
-        for j=1:1:size(theta,2)-1
-            s = [s sprintf('%5.3f &',theta(i,j))];
-        end
-        s=[s sprintf('%.3f\\\\\\\\',theta(i,size(theta,2)))];
-        fprintf(f,s);
-end
-fprintf(f,'\\end{bmatrix}\\end{equation}');
-    
-fprintf(f,'\\begin{equation}\\theta_i=\\begin{bmatrix}');
+fprintf(f,'\\begin{center}\\begin{tabular}{|c|c|c|}\\hline ');
+fprintf(f,'Trapezidal Friction & Online Friction & F constants\\\\\\hline ');
 for i=1:1:size(thetaFi)
-        s = ' ';
-        for j=1:1:size(thetaFi,2)-1
-            s = [s sprintf('%5.3f &',thetaFi(i,j))];
-        end
-        s=[s sprintf('%.3f\\\\\\\\',thetaFi(i,size(thetaFi,2)))];
-        fprintf(f,s);
+    if i<=size(theta,1)
+        fprintf(f,'%5.3f &',theta(i));
+    else
+        fprintf(f,'-&');
+    end;
+    fprintf(f,'%5.3f &',thetaFi(i));
+    if i>size(theta)
+        fprintf(f,'%5.3f',F(i-size(theta,1)));
+    else
+        fprintf(f,'-');
+    end
+    fprintf(f,'\\\\\\hline ');
 end
-fprintf(f,'\\end{bmatrix}\\end{equation}');
+fprintf(f,'\\end{tabular}\\end{center}');
+    
 fclose(f);
