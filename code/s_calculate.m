@@ -14,6 +14,7 @@ t4ff = filtfilt(d1,t4);
 t5ff = filtfilt(d1,t5);
 
 tArr = [t1 t2 t3 t4 t5];
+tArrff = [t1ff t2ff t3ff t4ff t5ff];
 
 % ищем начало и конец интервалов для нахождения среднего момента
 s = size(j1);
@@ -34,6 +35,64 @@ for i=1:1:s(1)
    end
 end
 
+bff = [];
+eff = [];
+
+% уменьшаем интервалы так, чтобы срезались переходные процессы
+dT = [zeros(1,5);diff(tArrff)];
+for i=1:1:size(b,2)-1
+    flg = 0;
+    m = mean(tArr(b(i):e(i),:));
+    dTstartSign = f_multi_sign(dT(b(i),:));
+    enableTruncateArr = zeros(5,1);  
+    enableTruncate = 0;
+    for j=b(i):1:e(i)
+        if ~enableTruncate
+            sumTruncate = 0;
+            for k=1:1:5
+                if dTstartSign(k)~=f_multi_sign(dT(j,:))
+                    enableTruncateArr(k) = 1;
+                end;
+                sumTruncate = sumTruncate + enableTruncateArr(k); 
+            end;
+            if sumTruncate==5
+                enableTruncate = 1;
+            end;
+        end;
+        if enableTruncate        
+            flgBeginTrunc = 1;
+            for k=1:1:5
+                if abs(dT(k)) >= 0.01
+                    flgBeginTrunc = 0;
+                end;
+            end;
+        
+            flgEndTrunc = 0;
+            for k=1:1:5
+                if abs(dT(k)) >= 0.01
+                    flgEndTrunc = 1;
+                end;
+            end;
+        
+            if flg==1
+                if flgEndTrunc
+                    eff = [eff; j];
+                    flg = 2; 
+                end;
+            end;
+            if flg==0
+                if flgBeginTrunc
+                    bff = [bff; j];
+                    flg = 1;
+                end
+            end;   
+      end;
+    end;
+    if flg==1
+       eff=[eff;e(i)];
+    end;  
+end;
+
 % ищем средние моменты
 T = [];
 Tm = [];
@@ -43,10 +102,9 @@ TIME = [];
 W = [];
 START = [];
 FINISH = [];
-sb = size(b);
-for i=1:1:sb(2)-1
-    start = b(i)+5;
-    finish = e(i)-5;  
+for i=1:1:size(bff)
+    start = bff(i);
+    finish = eff(i);  
     if start<finish
         curT = [t1(start:finish) t2(start:finish) t3(start:finish) t4(start:finish) t5(start:finish)];
         curMeanT = [mean(t1(start:finish)) mean(t2(start:finish)) mean(t3(start:finish)) mean(t4(start:finish)) mean(t5(start:finish))];
@@ -71,8 +129,8 @@ for i=1:1:sb(2)-1
     end
 end
     
-startT = 60;
-endT = 70;
+startT = 20;
+endT = 27;
 if flgPlot
     meanT = zeros(size(t1,1),5);
     start = START(startT);
@@ -85,7 +143,7 @@ if flgPlot
     for i=1:1:5
         f_my_plot([ j1(start:finish) j2(start:finish) j3(start:finish) j4(start:finish) j5(start:finish) tArr(start:finish,i) meanT(start:finish,i)],{'$j_1$','$j_2$','$j_3$','$j_4$','$j_5$',sprintf('$\\tau_%d~$',i),sprintf('$\\overline{\\tau_%d}$',i)}, sprintf('..\\imgs\\calculated\\meanT_sr_%d_%d.jpg',stdRange*100,i),'northwest',sprintf('CalculatedTorques for joint %d | Std range: %.2f| Configuration cnt: %d',i,stdRange,size(T,1)));
     end;
-    close all;
+    %close all;
 end;
 
 save('../workspace/calculated.mat','TIME','J','W','T','TASK','START','FINISH')
